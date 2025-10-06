@@ -4,7 +4,7 @@ from link_bio.views.header.header import header
 from link_bio.views.links.links import links
 from link_bio.components.footer import footer
 import link_bio.styles.styles as styles
-from link_bio.styles.styles import Size as Size
+from link_bio.styles.styles import Spacing as Spacing
 
 
 class State(rx.State):
@@ -28,12 +28,12 @@ def index() -> rx.Component:
                 links(),
                 max_width = styles.MAX_WIDTH,  # Ancho máximo del contenedor
                 width = "100%",
-                margin_y = Size.BIG.value,  # Espacio vertical entre bloques
+                margin_y = Spacing.BIG.value,  # Espacio vertical entre bloques
             )
         ),
         footer(),
     direction = "column",
-    spacing = Size.DEFAULT.value
+    spacing = Spacing.DEFAULT.value
     )
         #align="center",   # alinear horizontalmente
         #justify="center", # alinear verticalmente

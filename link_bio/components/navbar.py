@@ -1,22 +1,22 @@
 import reflex as rx
-import link_bio.styles.styles as styles
-from link_bio.styles.styles import Spacing
+from link_bio.styles.styles import TextSize, Spacing, Color, navbar_title_style
 
 def navbar() -> rx.Component:
     return rx.hstack(
         rx.box(
-            rx.text("DATA", color=styles.Color.LIGHT.value, as_="span"),
-            rx.text("FORGE", color=styles.Color.PURPLE.value, as_="span"),
-            style=styles.navbar_title_style,
+            rx.text("DATA", color=Color.LIGHT.value, as_="span"),
+            rx.text("FORGE", color=Color.PURPLE.value, as_="span"),
+            style=navbar_title_style,
         ),
         position="sticky",
-        bg=styles.Color.PRIMARY.value,
-        padding_x=Spacing.XL.value,  # Token oficial
+        bg=Color.PRIMARY.value,
+        padding_x=Spacing.XL.value,
         padding_y=Spacing.XL.value,
         width="100%",
         top=0,
         z_index=999
     )
+
 
 
 

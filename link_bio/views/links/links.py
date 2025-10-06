@@ -14,7 +14,7 @@ def links() -> rx.Component:
         tittle("Contacto"),
         link_buttom("Contacto", const.GMAIL, f"mailto:{const.GMAIL}"),
         width="100%",
-        spacing=Spacing.MD.value  # Token oficial
+        spacing=Spacing.MD.value
     )
 
 
