@@ -1,6 +1,8 @@
 import reflex as rx
 import datetime
-from link_bio.styles.styles import Size as Size
+from link_bio.styles.styles import TextSize as TextSize
+from link_bio.styles.styles import Spacing as Spacing
+
 from link_bio.styles.colors import TextColor as TextColor
 
 
@@ -22,14 +24,14 @@ def footer() -> rx.Component:
             f"© 2023-{datetime.date.today().year} Álvaro Rama Benedicto",
             href = "https://www.linkedin.com/in/alvaro-rama-benedicto-538603b4/?originalSubdomain=es",
             is_external = True,
-            font_size = Size.MEDIUM.value
+            font_size = TextSize.BASE.value
         ),
         rx.text("© 2023 Álvaro Rama Benedicto",
-                font_size = Size.MEDIUM.value
+                font_size = TextSize.BASE.value
         ),
-        margin_buttom = Size.BIG.value,
+        margin_buttom = Spacing.LG.value,
         align="center",
-        margin_top=Size.XL.value,
+        margin_top=Spacing.XL.value,
         color=TextColor.LIGHT.value
     )
 

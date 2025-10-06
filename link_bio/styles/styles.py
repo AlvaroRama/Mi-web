@@ -41,6 +41,17 @@ class Spacing(Enum):
     XXXL = "8"
     HUGE = "9"
 
+class IconSize(Enum):
+    SM = "16px"
+    MD = "24px"
+    LG = "32px"
+    XL = "48px"
+
+class ImageSize(Enum):
+    AVATAR = "64px"
+    THUMBNAIL = "128px"
+    HERO = "100%"
+
 
 # -----------------------------
 # ESTILOS GLOBALES
