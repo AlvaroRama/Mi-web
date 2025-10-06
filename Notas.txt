@@ -1,0 +1,5 @@
+video 2:18
+4:17
+
+Importante sobre las propiedades:
+Diferenciar lo que son propiedades del propio componente (como size) a lo que son propiedades de stilos como las del fichero styles
