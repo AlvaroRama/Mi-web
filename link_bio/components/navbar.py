@@ -6,7 +6,7 @@ def navbar() -> rx.Component:
         rx.box(
             rx.text("DATA", color=Color.LIGHT.value, as_="span"),
             rx.text("FORGE", color=Color.PURPLE.value, as_="span"),
-            style=navbar_title_style,
+            style = navbar_title_style,
         ),
         position="sticky",
         bg=Color.PRIMARY.value,

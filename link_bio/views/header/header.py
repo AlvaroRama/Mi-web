@@ -1,7 +1,7 @@
 import reflex as rx
 from link_bio.components.link_icon import link_icon
 from link_bio.components.info_text import info_text
-from link_bio.styles.styles import Size as Size
+from link_bio.styles.styles import TextSize as TextSize
 from link_bio.styles.colors import TextColor as TextColor
 from link_bio.styles.fonts import Font as Font
 
@@ -25,11 +25,11 @@ def header() -> rx.Component:
             rx.vstack(
                 rx.heading(
                     "Álvaro Rama Benedicto",
-                    font_size= Size.DEFAULT.value,
+                    font_size= TextSize.BASE.value,
                     color = TextColor.LIGHT.value
                 ),
                 rx.text("@alvarorama",
-                        font_size=Size.MEDIUM.value,
+                        font_size=TextSize.XL.value,
                         trim="start",  # Elimina espacios al principio
                         align="center",
                         width="100%",

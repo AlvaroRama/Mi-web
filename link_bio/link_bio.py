@@ -28,12 +28,12 @@ def index() -> rx.Component:
                 links(),
                 max_width = styles.MAX_WIDTH,  # Ancho máximo del contenedor
                 width = "100%",
-                margin_y = Spacing.BIG.value,  # Espacio vertical entre bloques
+                margin_y = Spacing.XL.value,  # Espacio vertical entre bloques
             )
         ),
         footer(),
     direction = "column",
-    spacing = Spacing.DEFAULT.value
+    spacing = Spacing.BASE.value
     )
         #align="center",   # alinear horizontalmente
         #justify="center", # alinear verticalmente

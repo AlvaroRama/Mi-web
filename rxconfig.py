@@ -17,4 +17,11 @@ config = rx.Config(
         # Esto te permite usar utilidades de Tailwind en tus componentes.
         rx.plugins.TailwindV4Plugin(),
     ],
+    
+    # Paquetes de fuentes
+    frontend_packages=[
+        "@fontsource/ibm-plex-mono",
+        "@fontsource/press-start-2p",
+    ],
+    
 )
