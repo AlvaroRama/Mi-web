@@ -8,7 +8,7 @@ def navbar() -> rx.Component:
             rx.text("DATAFORGE", color=Color.LIGHT.value,**navbar_title_style),
         ), 
         position="sticky",
-        bg=Color.PRIMARY.value,
+        bg="linear-gradient(to right, black, #213A73)",
         padding_x=Spacing.XL.value,
         padding_y=Spacing.XL.value,
         width="100%",

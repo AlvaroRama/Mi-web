@@ -24,7 +24,8 @@ class State(rx.State):
 # Combinamos ambas fuentes en una sola petición para optimizar la carga
 # GOOGLE_FONTS_URL = "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Press+Start+2P&display=swap"
 
-GOOGLE_FONTS_URL = "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Bubblegum+Sans&display=swap"
+GOOGLE_FONTS_URL = "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Silkscreen&display=swap"
+
 
 def index() -> rx.Component:
     return rx.flex(
