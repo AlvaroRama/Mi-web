@@ -1,12 +1,15 @@
 import reflex as rx
 from link_bio.styles.styles import TextSize, Spacing, Color, navbar_title_style
+from link_bio.styles.fonts import Font
 
 def navbar() -> rx.Component:
     return rx.hstack(
         rx.box(
             rx.text("DATA", color=Color.LIGHT.value, as_="span"),
             rx.text("FORGE", color=Color.PURPLE.value, as_="span"),
-            rx.text("La Forja del dato", color=Color.PURPLE.value, as_="span"),
+            rx.text("La Forja del dato", color=Color.PURPLE.value, as_="span", 
+                    #font_family=Font.LOGO.value, size=TextSize.HUGE.value
+                    ),
             style = navbar_title_style,
         ),
         position="sticky",

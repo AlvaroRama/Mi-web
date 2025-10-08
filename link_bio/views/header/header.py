@@ -4,6 +4,7 @@ from link_bio.components.info_text import info_text
 from link_bio.styles.styles import TextSize as TextSize
 from link_bio.styles.colors import TextColor as TextColor
 from link_bio.styles.fonts import Font as Font
+import link_bio.constants as constants
 
 def header() -> rx.Component:
     return rx.vstack(
@@ -36,7 +37,7 @@ def header() -> rx.Component:
                         color = TextColor.LIGHT.value                  
                 ),
                 rx.hstack(
-                    link_icon("https://www.linkedin.com/in/alvaro-rama-benedicto-538603b4/?originalSubdomain=es"),
+                    link_icon(constants.LINKEDIN_URL),
                     link_icon("https://www.linkedin.com/in/alvaro-rama-benedicto-538603b4/?originalSubdomain=es"),
                     link_icon("https://www.linkedin.com/in/alvaro-rama-benedicto-538603b4/?originalSubdomain=es")                    
                 ),
