@@ -90,19 +90,19 @@ button_title_style = dict(
 button_body_style = dict(
     size=TextSize.BASE.value,
     color=TextColor.LIGHT.value,
-    font_family=Font.DEFAULT.value,
+    font_family=Font.LOGO.value,
 )
 
 tittle_style = dict(
     width="100%",
     padding_top=Spacing.BASE.value,
     color=TextColor.LIGHT.value,
-    font_family=Font.DEFAULT.value,
+    font_family=Font.LOGO.value,
 )
 
 navbar_title_style = dict(
     font_family=Font.LOGO.value,
-    size=TextSize.XS.value,  # usamos token oficial
+    size=TextSize.XXXL.value,  # usamos token oficial
 )
 
 ######################################## ANTIGUO, MEZCLA DE CSS Y REFLEX ########################################

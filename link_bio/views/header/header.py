@@ -1,5 +1,5 @@
 import reflex as rx
-from link_bio.components.link_icon import link_icon
+from link_bio.components.link_icon import link_icon, github_icon,kaggle_icon
 from link_bio.components.info_text import info_text
 from link_bio.styles.styles import TextSize as TextSize
 from link_bio.styles.colors import TextColor as TextColor
@@ -13,7 +13,7 @@ def header() -> rx.Component:
                 color="white",
                 bg="black",
                 font_family="monospace",
-                font_size="2em",
+                font_size="2em", # Propiedad de CSS en em, no es un token de Reflex.
                 width="80px",
                 height="80px",
                 display="flex",
@@ -26,25 +26,31 @@ def header() -> rx.Component:
             rx.vstack(
                 rx.heading(
                     "Álvaro Rama Benedicto",
-                    font_size= TextSize.BASE.value,
+                    size = TextSize.XL.value,
                     color = TextColor.LIGHT.value
                 ),
                 rx.text("@alvarorama",
-                        font_size=TextSize.XL.value,
-                        trim="start",  # Elimina espacios al principio
+                        size = TextSize.BASE.value,
+                        # trim="start",  # Elimina espacios al principio
                         align="center",
                         width="100%",
                         color = TextColor.LIGHT.value                  
                 ),
                 rx.hstack(
                     link_icon(constants.LINKEDIN_URL),
-                    link_icon("https://www.linkedin.com/in/alvaro-rama-benedicto-538603b4/?originalSubdomain=es"),
-                    link_icon("https://www.linkedin.com/in/alvaro-rama-benedicto-538603b4/?originalSubdomain=es")                    
+                    github_icon(constants.GITHUB),
+                    kaggle_icon(constants.KAGGLE),
+                    width="100%",
+                    justify="center",
+                    spacing = "9"
+                                      
                 ),
-                spacing="0",
+                spacing="1",
                 color = TextColor.LIGHT.value
             ),
-            align="center"
+            align="center",
+            width="100%"
+            
         ),
         rx.flex(
             info_text("+13", "años de experiencia"),
@@ -52,7 +58,7 @@ def header() -> rx.Component:
             info_text("+13", "años de experiencia"),
             rx.spacer(),
             info_text("+13", "años de experiencia"),
-            width="100%"
+            #width="100%"
         ),
         rx.text(
             """Desarrollo software especializado en Python.

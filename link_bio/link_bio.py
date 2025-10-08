@@ -18,13 +18,20 @@ class State(rx.State):
 """Defines la función de página llamada index. 
 - Cada página en Reflex es una función que devuelve componentes """
 
+# link_bio/link_bio.py (Añadir al inicio)
+
+# Definición de la URL de las fuentes de Google
+# Combinamos ambas fuentes en una sola petición para optimizar la carga
+# GOOGLE_FONTS_URL = "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Press+Start+2P&display=swap"
+
+GOOGLE_FONTS_URL = "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Bubblegum+Sans&display=swap"
+
 def index() -> rx.Component:
     return rx.flex(
         navbar(),
         rx.center(
             rx.vstack(
                 header(),
-                links(),
                 links(),
                 max_width = styles.MAX_WIDTH,  # Ancho máximo del contenedor
                 width = "100%",
@@ -49,8 +56,9 @@ def index() -> rx.Component:
 - La configuración global (tema, estilos, etc., si quisieras añadirla)"""
 
 app = rx.App(
-    style = styles.BASE_STYLE, # Estilos globales definidos en styles.py
-    stylesheets = ["/fonts.css"]
+    style = styles.BASE_STYLE,
+    # Carga directa de la URL de Google Fonts.
+    stylesheets = [GOOGLE_FONTS_URL]
 )
 
 """Registras la página index en la aplicación.
