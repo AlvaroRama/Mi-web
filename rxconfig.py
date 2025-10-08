@@ -19,9 +19,9 @@ config = rx.Config(
     ],
     
     # Paquetes de fuentes
-    frontend_packages=[
-        "@fontsource/ibm-plex-mono",
-        "@fontsource/press-start-2p",
-    ],
+    #frontend_packages=[
+    #    "@fontsource/ibm-plex-mono",
+    #    "@fontsource/press-start-2p",
+    #],
     
 )

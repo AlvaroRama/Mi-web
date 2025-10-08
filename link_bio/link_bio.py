@@ -49,7 +49,8 @@ def index() -> rx.Component:
 - La configuración global (tema, estilos, etc., si quisieras añadirla)"""
 
 app = rx.App(
-    style = styles.BASE_STYLE,  # Estilos globales definidos en styles.py
+    style = styles.BASE_STYLE, # Estilos globales definidos en styles.py
+    stylesheets = ["/fonts.css"]
 )
 
 """Registras la página index en la aplicación.
