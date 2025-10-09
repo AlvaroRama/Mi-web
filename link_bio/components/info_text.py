@@ -3,13 +3,13 @@ from link_bio.styles.styles import TextSize as TextSize
 from link_bio.styles.colors import TextColor as TextColor
 from link_bio.styles.colors import Color as Color
 
-def info_text(body: str, align: str) -> rx.Component:
+def info_text(body: str, *align: str) -> rx.Component:
     return rx.text(body,
                    as_= "span",
-                   size = TextSize.MD.value,
+                   size = TextSize.SM.value,
                    color = TextColor.LIGHT.value,
                    weight = "bold",
-                   align = align
+                   
     )
 
 

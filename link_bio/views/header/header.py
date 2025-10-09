@@ -3,6 +3,7 @@ from link_bio.components.link_icon import link_icon, github_icon,kaggle_icon
 from link_bio.components.info_text import info_text
 from link_bio.styles.styles import TextSize as TextSize
 from link_bio.styles.colors import TextColor as TextColor
+from link_bio.styles.styles import Spacing as Spacing
 from link_bio.styles.fonts import Font as Font
 import link_bio.constants as constants
 
@@ -30,7 +31,7 @@ def header() -> rx.Component:
                     color = TextColor.LIGHT.value
                 ),
                 rx.text("@alvarorama",
-                        size = TextSize.BASE.value,
+                        size = TextSize.SM.value,
                         # trim="start",  # Elimina espacios al principio
                         align="center",
                         width="100%",
@@ -42,7 +43,7 @@ def header() -> rx.Component:
                     kaggle_icon(constants.KAGGLE),
                     width="100%",
                     justify="center",
-                    spacing = "9"
+                    spacing = Spacing.HUGE.value
                                       
                 ),
                 spacing="1",
@@ -52,11 +53,11 @@ def header() -> rx.Component:
             width="100%"
             
         ),
-        rx.flex(
-            info_text("Desarrollo en Python", "center"),
+        rx.hstack(
+            info_text("Desarrollos en Python", "center"),
             info_text("ML & MLOPS", "center"),   
             info_text("Estadística práctica", "center"),      
-            spacing= "3",
+            spacing= "9",
             width="100%"
         ),
         rx.text(
@@ -64,7 +65,7 @@ def header() -> rx.Component:
                 También trabajamos con diferentes tecnologías.
                 Esta es mi web de link con publicaciones de aprendizaje automático""",
                 color=TextColor.LIGHT.value,
-                # font_family = Font.DEFAULT.value
+                size = TextSize.SM.value,
                 ),
         align_items = "start"
     )
