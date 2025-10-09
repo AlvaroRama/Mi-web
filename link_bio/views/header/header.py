@@ -53,12 +53,11 @@ def header() -> rx.Component:
             
         ),
         rx.flex(
-            info_text("+13", "años de experiencia"),
-            rx.spacer(),
-            info_text("+13", "años de experiencia"),
-            rx.spacer(),
-            info_text("+13", "años de experiencia"),
-            #width="100%"
+            info_text("Desarrollo en Python", "center"),
+            info_text("ML & MLOPS", "center"),   
+            info_text("Estadística práctica", "center"),      
+            spacing= "3",
+            width="100%"
         ),
         rx.text(
             """Desarrollo software especializado en Python.
