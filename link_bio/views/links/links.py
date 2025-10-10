@@ -9,8 +9,6 @@ def links() -> rx.Component:
         tittle("Comunidad"),
         link_buttom("LinkedIn", "Ejemplo de body", const.LINKEDIN_URL),
         link_buttom("YouTube", "Ejemplo de body", const.LINKEDIN_URL),
-        link_buttom("Discord", "Ejemplo de body", const.LINKEDIN_URL),
-        link_buttom("Proyectos", "Ejemplo de body", const.LINKEDIN_URL),
         tittle("Contacto"),
         link_buttom("Contacto", const.GMAIL, f"mailto:{const.GMAIL}"),
         width="100%",

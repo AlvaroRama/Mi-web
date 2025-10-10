@@ -1,5 +1,5 @@
 import reflex as rx
-from link_bio.components.link_icon import link_icon, github_icon,kaggle_icon
+from link_bio.components.link_icon import link_icon
 from link_bio.components.info_text import info_text
 from link_bio.styles.styles import TextSize as TextSize
 from link_bio.styles.colors import TextColor as TextColor
@@ -28,7 +28,9 @@ def header() -> rx.Component:
                 rx.heading(
                     "Álvaro Rama Benedicto",
                     size = TextSize.XL.value,
-                    color = TextColor.LIGHT.value
+                    color = TextColor.LIGHT.value,
+                    trim="both"
+                    
                 ),
                 rx.text("@alvarorama",
                         size = TextSize.SM.value,
@@ -38,15 +40,15 @@ def header() -> rx.Component:
                         color = TextColor.LIGHT.value                  
                 ),
                 rx.hstack(
-                    link_icon(constants.LINKEDIN_URL),
-                    github_icon(constants.GITHUB),
-                    kaggle_icon(constants.KAGGLE),
+                    link_icon(constants.LINKEDIN_URL,"icons/linkedin.svg"),
+                    link_icon(constants.LINKEDIN_URL,"icons/github.svg"),
+                    link_icon(constants.LINKEDIN_URL,"icons/kaggle.svg"),
                     width="100%",
                     justify="center",
                     spacing = Spacing.HUGE.value
                                       
                 ),
-                spacing="1",
+                spacing=Spacing.SM.value,
                 color = TextColor.LIGHT.value
             ),
             align="center",
