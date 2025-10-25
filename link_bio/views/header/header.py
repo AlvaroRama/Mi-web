@@ -63,9 +63,8 @@ def header() -> rx.Component:
             width="100%"
         ),
         rx.text(
-            """Desarrollo software especializado en Python.
-                También trabajamos con diferentes tecnologías.
-                Esta es mi web de link con publicaciones de aprendizaje automático""",
+            """Desarrollo de aplicaciones basadas en datos con Python y diferentes tecnologías.
+                Esta es mi web con publicaciones orientadas al aprendizaje automático.""",
                 color=TextColor.LIGHT.value,
                 size = TextSize.SM.value,
                 ),
