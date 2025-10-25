@@ -4,9 +4,8 @@ from link_bio.styles.styles import TextSize, Spacing, tittle_style
 def tittle(text: str) -> rx.Component:
     return rx.heading(
         text,
-        style=tittle_style,
+        **tittle_style,
         size=TextSize.XL.value,      # Token oficial Reflex
-        padding_top=Spacing.BASE.value
     )
 
 

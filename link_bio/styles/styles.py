@@ -83,8 +83,9 @@ BASE_STYLE = {
 # -----------------------------
 button_title_style = dict(
     size=TextSize.BASE.value,
-    color=TextColor.LIGHT.value,
+    color=TextColor.DARK.value,
     font_family=Font.DEFAULT.value,
+    weight = "bold"
 )
 
 button_body_style = dict(
@@ -102,9 +103,11 @@ tittle_style = dict(
 
 navbar_title_style = dict(
     font_family=Font.DEFAULT.value,
-    size=TextSize.XXXL.value,  # usamos token oficial
+    size=TextSize.XXXL.value, # usamos token oficial
+    weight = "bold"
 )
 
+ 
 ######################################## ANTIGUO, MEZCLA DE CSS Y REFLEX ########################################
 
 ## Styles for the Link Bio application

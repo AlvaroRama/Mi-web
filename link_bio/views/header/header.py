@@ -3,6 +3,7 @@ from link_bio.components.link_icon import link_icon
 from link_bio.components.info_text import info_text
 from link_bio.styles.styles import TextSize as TextSize
 from link_bio.styles.colors import TextColor as TextColor
+from link_bio.styles.colors import Color as Color
 from link_bio.styles.styles import Spacing as Spacing
 from link_bio.styles.fonts import Font as Font
 import link_bio.constants as constants
@@ -11,8 +12,8 @@ def header() -> rx.Component:
     return rx.vstack(
         rx.hstack(
             rx.box("ARB",
-                color="white",
-                bg="black",
+                color=Color.LIGHT.value,
+                bg=Color.DARK.value,
                 font_family="monospace",
                 font_size="2em", # Propiedad de CSS en em, no es un token de Reflex.
                 width="80px",

@@ -1,27 +1,29 @@
 import reflex as rx
+from typing import Optional
 import link_bio.styles.styles as styles
+from link_bio.components.link_icon import link_icon
 from link_bio.styles.colors import TextColor as TextColor
 from link_bio.styles.colors import Color as Color
 from link_bio.styles.styles import Spacing as Spacing
+from link_bio.styles.styles import button_title_style as button_title_style
 from link_bio.styles.styles import button_body_style as button_body_style
 
 
-def link_buttom(tittle: str, body: str, url: str ) -> rx.Component:
+def link_buttom(tittle: str, url: str, imagen: str, body: Optional[str] = None ) -> rx.Component:
     return rx.link(
         rx.button(
             rx.hstack(
-                rx.icon(
-                    tag = "linkedin",
-                    width = styles.Spacing.XL.value,
-                    height = styles.Spacing.XL.value,
-                    color="black",
-                ),
+                rx.image(src = imagen,
+                         width=styles.IconSize.MD.value,
+                         height=styles.IconSize.MD.value
+                         ),
                 rx.vstack(
                     rx.text(tittle,
-                            style = styles.button_body_style,
-                            ),
-                    rx.text(body,
-                            style = styles.button_body_style,
+                            **button_title_style,
+                           ),
+                    rx.cond(body,
+                            rx.text(body,
+                                    **button_body_style)
                             ),
                     spacing= Spacing.MD.value,
                     width = "100%",

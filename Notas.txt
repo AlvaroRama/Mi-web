@@ -3,3 +3,15 @@ video 2:18
 
 Importante sobre las propiedades:
 Diferenciar lo que son propiedades del propio componente (como size) a lo que son propiedades de stilos como las del fichero styles
+
+Notas importantes sobre los estilos:
+Cuando usas style=styles.button_title_style, Reflex espera que el diccionario styles.button_title_style solo contenga propiedades CSS (como font_size, color, etc.), pero tu diccionario contiene claves que son propiedades de Reflex/Radix Themes (size, weight, etc.), no CSS puras.
+
+Como la web está basada en propiedades de refles siempre tengo que desempaquetar el diccionario de estilos:
+rx.text(tittle, **styles.button_title_style)
+
+Sin embargo La mezcla de estilos en tu BASE_STYLE es correcta porque es una configuración a nivel de la App. El conflicto solo ocurre cuando intentas aplicar un estilo específico con propiedades de Reflex/Radix a un componente usando la sintaxis incorrecta (style= en lugar de **).
+Mecanismo,Uso,Acepta Propiedades de Reflex/Radix?
+style=styles.BASE_STYLE en rx.App(),Configuración global y overrides de componentes.,"Sí, interpretadas como tema/estilos por defecto."
+**tu_estilo en un componente,"Aplicar propiedades directas (incluyendo size, weight, etc.).","Sí, se pasan como argumentos de palabra clave."
+style=tu_estilo en un componente,Aplicar CSS puro.,"No, falla si contiene propiedades como size o weight."
