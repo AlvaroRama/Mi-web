@@ -9,7 +9,7 @@ def links() -> rx.Component:
     return rx.vstack(
         tittle("Recursos"),
         campo_materia("Ingeniería de características",
-                          "icons/linkedin.svg"
+                          "icons/hammer-solid.svg"
                           ),
         tittle("RRSS"),
         link_buttom("Visita mi perfil de Linkedin",
