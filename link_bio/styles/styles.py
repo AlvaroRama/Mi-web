@@ -59,6 +59,10 @@ class ImageSize(Enum):
 BASE_STYLE = {
     "font_family": Font.DEFAULT.value,
     "background_color": Color.DARK.value,
+
+    # -----------------------------
+    # BOTONES
+    # -----------------------------
     rx.button: {
         "width": "100%",
         "height": "100%",
@@ -68,14 +72,56 @@ BASE_STYLE = {
         "color": TextColor.LIGHT.value,
         "background_color": Color.PURPLE.value,
         "_hover": {
-            "background_color": Color.PURPLE.value
+            "background_color": Color.YELLOW.value,
         },
     },
+
+    # -----------------------------
+    # ACORDEONES
+    # -----------------------------
+    # Contenedor general del acordeón
+    rx.accordion.item: {
+        "width": "100%",
+        "border_radius": Spacing.BASE.value,
+        "color": TextColor.LIGHT.value,
+        "background_color": Color.PURPLE.value,
+        "overflow": "hidden",  # evita que sobresalga el borde al expandir
+    },
+
+    # Trigger (la parte clicable, equivalente al botón)
+    rx.accordion.trigger: {
+        "width": "100%",
+        "padding": Spacing.SM.value,
+        "display": "flex",
+        "align_items": "center",
+        "gap": Spacing.MD.value,
+        "background_color": Color.PURPLE.value,
+        "color": TextColor.LIGHT.value,
+        "border_radius": Spacing.BASE.value,
+        "cursor": "pointer",
+        "_hover": {
+            "background_color": Color.YELLOW.value,
+        },
+    },
+
+    # Contenido expandido del acordeón
+    rx.accordion.content: {
+        "padding": Spacing.SM.value,
+        "background_color": Color.PURPLE.value,   # mismo color base
+        "color": TextColor.LIGHT.value,
+        "font_family": Font.DEFAULT.value,
+        "border_top": f"1px solid {Color.DARK.value}",  # separador sutil
+    },
+
+    # -----------------------------
+    # ENLACES
+    # -----------------------------
     rx.link: {
         "text_decoration": "none",
-        "_hover": {}
-    }
+        "_hover": {},
+    },
 }
+
 
 
 # -----------------------------
@@ -105,6 +151,10 @@ navbar_title_style = dict(
     font_family=Font.DEFAULT.value,
     size=TextSize.XXXL.value, # usamos token oficial
     weight = "bold"
+)
+
+acordeon_style = dict(
+    bg=Color.PURPLE.value
 )
 
  
@@ -188,3 +238,34 @@ navbar_title_style = dict(
 #    font_family = Font.LOGO.value,
 #    font_size = Size.XXL.value,
 #)
+
+#Modificacion despues de añadir el acordeon:
+#BASE_STYLE = {
+#    "font_family": Font.DEFAULT.value,
+#    "background_color": Color.DARK.value,
+#    rx.button: {
+#        "width": "100%",
+#        "height": "100%",
+#        "display": "block",
+#        "padding": Spacing.SM.value,
+#        "border_radius": Spacing.BASE.value,
+#        "color": TextColor.LIGHT.value,
+#        "background_color": Color.PURPLE.value,
+#        "_hover": {
+#            "background_color": Color.YELLOW.value
+#        },
+#    
+#    },
+#    rx.accordion.item: {     # 🔹 estilo base para los acordeones
+#        "width": "100%",
+#        "padding": Spacing.SM.value,
+#        "border_radius": Spacing.BASE.value,
+#        "color": TextColor.LIGHT.value,
+#        "background_color": Color.PURPLE.value,
+#        "_hover": {}
+#    },
+#    rx.link: {
+#        "text_decoration": "none",
+#        "_hover": {}
+#    }
+#}

@@ -1,13 +1,16 @@
 import reflex as rx
 from link_bio.components.link_buttom import link_buttom
 from link_bio.components.tittle import tittle
+from link_bio.components.campo_materia import campo_materia
 from link_bio.styles.styles import Spacing
 import link_bio.constants as const
 
 def links() -> rx.Component:
     return rx.vstack(
         tittle("Recursos"),
-        
+        campo_materia("Ingeniería de características",
+                          "icons/linkedin.svg"
+                          ),
         tittle("RRSS"),
         link_buttom("Visita mi perfil de Linkedin",
                     const.LINKEDIN_URL,

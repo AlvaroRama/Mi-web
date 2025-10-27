@@ -9,13 +9,14 @@ from link_bio.styles.colors import TextColor as TextColor
 def footer() -> rx.Component:
     return rx.vstack(
         rx.vstack(
-            rx.text("Web realizada con tecnología",
-                font_size = TextSize.BASE.value
+            rx.text("Web realizada con tecnología Reflex",
+                font_size = TextSize.BASE.value,
+                trim="both"
             ),
             rx.link(
                 rx.image(src = "favicon.ico",
-            #width=ImageSize.AVATAR, height=ImageSize.AVATAR,
-            # style={"margin": "0 auto", "display": "block"} # Imagen centrada en el footer por css. Patron para centrar imagenes.
+                         style={"margin": "0 auto",
+                                "display": "block"}# Imagen centrada en el footer por css. Patron para centrar imagenes.
                 ),
                 href="https://reflex.dev/",
                 is_external = True,

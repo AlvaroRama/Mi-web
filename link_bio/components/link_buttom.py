@@ -31,10 +31,10 @@ def link_buttom(tittle: str, url: str, imagen: str, body: Optional[str] = None )
                     margin = Spacing.ZERO.value
                     
                 ),
-                align="center", # Alinear icono y texto verticalmente
+            align="center", # Alinear icono y texto verticalmente
             )
         ),
         href = url,
         is_external = True,
-        width = "100%",
+        width = "100%",  
     )
