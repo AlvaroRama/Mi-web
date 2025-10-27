@@ -68,7 +68,7 @@ BASE_STYLE = {
         "color": TextColor.LIGHT.value,
         "background_color": Color.PURPLE.value,
         "_hover": {
-            "background_color": Color.PRIMARY.value
+            "background_color": Color.PURPLE.value
         },
     },
     rx.link: {
@@ -83,7 +83,7 @@ BASE_STYLE = {
 # -----------------------------
 button_title_style = dict(
     size=TextSize.BASE.value,
-    color=TextColor.DARK.value,
+    color=TextColor.LIGHT.value,
     font_family=Font.DEFAULT.value,
     weight = "bold"
 )

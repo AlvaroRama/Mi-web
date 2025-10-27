@@ -1,7 +1,7 @@
 import reflex as rx
 from typing import Optional
 import link_bio.styles.styles as styles
-from link_bio.components.link_icon import link_icon
+
 from link_bio.styles.colors import TextColor as TextColor
 from link_bio.styles.colors import Color as Color
 from link_bio.styles.styles import Spacing as Spacing

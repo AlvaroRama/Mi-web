@@ -6,6 +6,8 @@ import link_bio.constants as const
 
 def links() -> rx.Component:
     return rx.vstack(
+        tittle("Recursos"),
+        
         tittle("RRSS"),
         link_buttom("Visita mi perfil de Linkedin",
                     const.LINKEDIN_URL,
