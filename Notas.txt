@@ -15,3 +15,9 @@ Mecanismo,Uso,Acepta Propiedades de Reflex/Radix?
 style=styles.BASE_STYLE en rx.App(),Configuración global y overrides de componentes.,"Sí, interpretadas como tema/estilos por defecto."
 **tu_estilo en un componente,"Aplicar propiedades directas (incluyendo size, weight, etc.).","Sí, se pasan como argumentos de palabra clave."
 style=tu_estilo en un componente,Aplicar CSS puro.,"No, falla si contiene propiedades como size o weight."
+
+Recomendación general
+
+Props como size, spacing, radius, gap, align, justify → usan tokens Reflex ("0"–"9").
+
+Props como padding, margin, width, height, font_size → puedes usar em, rem, px, %, etc.

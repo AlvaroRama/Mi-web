@@ -3,6 +3,7 @@ from link_bio.components.navbar import navbar
 from link_bio.views.header.header import header
 from link_bio.views.links.links import links
 from link_bio.components.footer import footer
+from link_bio.views.materias.materias import materias
 import link_bio.styles.styles as styles
 from link_bio.styles.styles import Spacing as Spacing
 
@@ -33,6 +34,7 @@ def index() -> rx.Component:
         rx.center(
             rx.vstack(
                 header(),
+                materias(),
                 links(),
                 max_width = styles.MAX_WIDTH,  # Ancho máximo del contenedor
                 width = "100%",

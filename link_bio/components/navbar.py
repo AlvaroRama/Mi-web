@@ -5,10 +5,12 @@ from link_bio.styles.fonts import Font
 def navbar() -> rx.Component:
     return rx.hstack(
         rx.box(
-            rx.text("FORGING DATA", color=Color.LIGHT.value,**navbar_title_style),
+            rx.text("FORGING DATA", 
+                    color=Color.LIGHT.value,
+                    **navbar_title_style),
         ), 
         position="sticky",
-        bg="linear-gradient(to right, black, #213A73)",
+        bg="linear-gradient(to right, black, #3358D4)",
         padding_x=Spacing.XL.value,
         padding_y=Spacing.XL.value,
         width="100%",

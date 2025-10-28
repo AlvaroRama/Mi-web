@@ -40,6 +40,18 @@ class Spacing(Enum):
     XXL = "7"
     XXXL = "8"
     HUGE = "9"
+    
+class Spacing_CSS(Enum):
+    ZERO = "0em"
+    XS = "0.25em"
+    SM = "0.5em"
+    MD = "0.75em"
+    BASE = "1em"
+    LG = "1.5em"
+    XL = "2em"
+    XXL = "2.5em"
+    XXXL = "3em"
+    HUGE = "4em"
 
 class IconSize(Enum):
     SM = "16px"
@@ -67,12 +79,12 @@ BASE_STYLE = {
         "width": "100%",
         "height": "100%",
         "display": "block",
-        "padding": Spacing.SM.value,
-        "border_radius": Spacing.BASE.value,
+        "padding": Spacing_CSS.SM.value,
+        "border_radius": Spacing_CSS.SM.value,
         "color": TextColor.LIGHT.value,
         "background_color": Color.PURPLE.value,
         "_hover": {
-            "background_color": Color.YELLOW.value,
+            "background_color": Color.INDIGO.value,
         },
     },
 
@@ -80,37 +92,30 @@ BASE_STYLE = {
     # ACORDEONES
     # -----------------------------
     # Contenedor general del acordeón
-    rx.accordion.item: {
+rx.accordion.item: {
         "width": "100%",
-        "border_radius": Spacing.BASE.value,
-        "color": TextColor.LIGHT.value,
+        "border_radius": Spacing_CSS.SM.value,
         "background_color": Color.PURPLE.value,
         "overflow": "hidden",  # evita que sobresalga el borde al expandir
     },
 
     # Trigger (la parte clicable, equivalente al botón)
     rx.accordion.trigger: {
-        "width": "100%",
-        "padding": Spacing.SM.value,
+        #"width": "100%",
+        "padding": Spacing_CSS.SM.value,
         "display": "flex",
-        "align_items": "center",
-        "gap": Spacing.MD.value,
+        #"align_items": "left", No parece tener efecto.
+        #"gap": Spacing.XXXL.value, No parece tener efecto
         "background_color": Color.PURPLE.value,
-        "color": TextColor.LIGHT.value,
-        "border_radius": Spacing.BASE.value,
+        "border_radius": Spacing_CSS.SM.value,
         "cursor": "pointer",
-        "_hover": {
-            "background_color": Color.YELLOW.value,
-        },
     },
 
     # Contenido expandido del acordeón
     rx.accordion.content: {
-        "padding": Spacing.SM.value,
-        "background_color": Color.PURPLE.value,   # mismo color base
+        "padding": Spacing_CSS.SM.value,
+        "background_color": Color.PURPLE.value,  # mismo color base
         "color": TextColor.LIGHT.value,
-        "font_family": Font.DEFAULT.value,
-        "border_top": f"1px solid {Color.DARK.value}",  # separador sutil
     },
 
     # -----------------------------
@@ -152,11 +157,6 @@ navbar_title_style = dict(
     size=TextSize.XXXL.value, # usamos token oficial
     weight = "bold"
 )
-
-acordeon_style = dict(
-    bg=Color.PURPLE.value
-)
-
  
 ######################################## ANTIGUO, MEZCLA DE CSS Y REFLEX ########################################
 
