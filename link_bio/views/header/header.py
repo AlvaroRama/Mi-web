@@ -27,7 +27,7 @@ def header() -> rx.Component:
             rx.vstack(
                 rx.heading(
                     "Álvaro Rama Benedicto",
-                    size = TextSize.XL.value,
+                    #size = TextSize.XL.value,
                     color = TextColor.LIGHT.value,
                     trim="both"
                     

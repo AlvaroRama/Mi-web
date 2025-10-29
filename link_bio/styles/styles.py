@@ -3,10 +3,17 @@ import reflex as rx
 from enum import Enum
 from .colors import Color
 from .colors import TextColor
-from .fonts import Font
+from .fonts import Font, FontWeight
+
 
 # Constants
 MAX_WIDTH = "560px"
+
+# Fuentes:
+
+STYLESHEETS = [
+    "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;700&display=swap"
+]
 
 # -----------------------------
 # TOKENS OFICIALES DE REFLEX
@@ -70,6 +77,7 @@ class ImageSize(Enum):
 # -----------------------------
 BASE_STYLE = {
     "font_family": Font.DEFAULT.value,
+    "font_weight": FontWeight.MEDIUM.value,
     "background_color": Color.DARK.value,
 
     # -----------------------------
@@ -139,6 +147,7 @@ button_title_style = dict(
     size=TextSize.BASE.value,
     color=TextColor.DARK.value,
     font_family=Font.DEFAULT.value,
+    font_weight = FontWeight.MEDIUM.value,
     weight = "bold"
 )
 
@@ -146,6 +155,7 @@ button_body_style = dict(
     size=TextSize.MD.value,
     color=TextColor.DARK.value,
     font_family=Font.DEFAULT.value,
+    font_weight = FontWeight.MEDIUM.value,
     weight = "bold"
 )
 
@@ -154,13 +164,14 @@ tittle_style = dict(
     padding_top=Spacing.BASE.value,
     color=TextColor.LIGHT.value,
     font_family=Font.DEFAULT.value,
+    font_weight = FontWeight.MEDIUM.value,
 )
 
 navbar_title_style = dict(
     font_family = Font.DEFAULT.value,
+    font_weight = FontWeight.HIGHT.value,
     size = TextSize.XXXL.value,
     color = Color.LIGHT.value,
-    weight = "bold"
 )
  
 ######################################## ANTIGUO, MEZCLA DE CSS Y REFLEX ########################################

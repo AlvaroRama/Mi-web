@@ -61,7 +61,8 @@ def index() -> rx.Component:
 app = rx.App(
     style = styles.BASE_STYLE,
     # Carga directa de la URL de Google Fonts.
-    stylesheets = [GOOGLE_FONTS_URL]
+    #stylesheets = [GOOGLE_FONTS_URL]
+    stylesheets = styles.STYLESHEETS
 )
 
 """Registras la página index en la aplicación.
@@ -71,7 +72,11 @@ Al no indicar route, Reflex la pone en la ruta raíz /.
 El nombre de la función se usa para el título por defecto.
 
 """
-app.add_page(index)
+app.add_page(
+    index,    
+    title = "Alvaro Rama Benedicto | Mi web en Reflex con recursos",
+    description = "Hola, mi nombre es Álvaro. Bienvenido a esta página donde espero encuentres recursos interesantes relacionados con la ciencia de datos",
+    image = "icons/hammer-solid.svg")
 
 
 # Compilar la aplicación para generar el frontend
