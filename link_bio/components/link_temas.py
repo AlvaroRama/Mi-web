@@ -12,13 +12,14 @@ from link_bio.styles.styles import button_body_style as button_body_style
 def link_temas(tittle: str, url: str) -> rx.Component:
     return rx.link(
             rx.hstack(
-                rx.image(src = "icons/arrow_right-solid.svg",
-                         width=styles.IconSize.MD.value,
-                         height=styles.IconSize.MD.value
+                rx.spacer(),
+                rx.image(src = "icons/chevron-right-solid.svg",
+                         width=styles.IconSize.SM.value,
+                         height=styles.IconSize.SM.value
                          ),
                 rx.vstack(
                     rx.text(tittle,
-                            **button_title_style,
+                            **button_body_style,
                            ),
                     spacing= Spacing.MD.value,
                     width = "100%",

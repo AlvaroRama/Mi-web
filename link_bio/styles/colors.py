@@ -8,7 +8,7 @@ class Color(Enum):
     YELLOW = "#FFA61E"
     ORANGE = "#FF5500"
     GREEN = "#00AA47"
-    INDIGO = "#3358D4"
+    INDIGO = "#5472E4"
     
 class TextColor(Enum):
     LIGHT = "#F7F7F7"

@@ -82,7 +82,7 @@ BASE_STYLE = {
         "padding": Spacing_CSS.SM.value,
         "border_radius": Spacing_CSS.SM.value,
         "color": TextColor.LIGHT.value,
-        "background_color": Color.PURPLE.value,
+        "background_color": Color.INDIGO.value,
         "_hover": {
             "background_color": Color.INDIGO.value,
         },
@@ -92,10 +92,10 @@ BASE_STYLE = {
     # ACORDEONES
     # -----------------------------
     # Contenedor general del acordeón
-rx.accordion.item: {
+    rx.accordion.item: {
         "width": "100%",
         "border_radius": Spacing_CSS.SM.value,
-        "background_color": Color.PURPLE.value,
+        "background_color": Color.INDIGO.value,
         "overflow": "hidden",  # evita que sobresalga el borde al expandir
     },
 
@@ -106,17 +106,21 @@ rx.accordion.item: {
         "display": "flex",
         #"align_items": "left", No parece tener efecto.
         #"gap": Spacing.XXXL.value, No parece tener efecto
-        "background_color": Color.PURPLE.value,
+        "background_color": Color.INDIGO.value,
         "border_radius": Spacing_CSS.SM.value,
         "cursor": "pointer",
     },
 
     # Contenido expandido del acordeón
     rx.accordion.content: {
-        "padding": Spacing_CSS.SM.value,
-        "background_color": Color.PURPLE.value,  # mismo color base
-        "color": TextColor.LIGHT.value,
-    },
+    "padding_top": Spacing_CSS.XS.value,
+    "padding_right": Spacing_CSS.SM.value,
+    "padding_bottom": Spacing_CSS.XS.value,
+    "padding_left": Spacing_CSS.SM.value,
+
+    "background_color": Color.INDIGO.value, 
+    "color": TextColor.LIGHT.value,
+},
 
     # -----------------------------
     # ENLACES
@@ -134,15 +138,16 @@ rx.accordion.item: {
 # -----------------------------
 button_title_style = dict(
     size=TextSize.BASE.value,
-    color=TextColor.LIGHT.value,
+    color=TextColor.DARK.value,
     font_family=Font.DEFAULT.value,
     weight = "bold"
 )
 
 button_body_style = dict(
-    size=TextSize.BASE.value,
-    color=TextColor.LIGHT.value,
+    size=TextSize.MD.value,
+    color=TextColor.DARK.value,
     font_family=Font.DEFAULT.value,
+    weight = "bold"
 )
 
 tittle_style = dict(
@@ -196,7 +201,7 @@ navbar_title_style = dict(
 #        "padding": Size.SMALL.value, # Espacio interno de los botones
 #        "border_radius": Size.DEFAULT.value,
 #        "color": TextColor.LIGHT.value, # Color del texto
-#        "background_color": Color.PURPLE.value,# Bordes redondeados
+#        "background_color": Color.INDIGO.value,# Bordes redondeados
 #        "_hover": {
 #            "background_color": Color.PRIMARY.value # Color de fondo al pasar el cursor
 #        }
@@ -250,7 +255,7 @@ navbar_title_style = dict(
 #        "padding": Spacing.SM.value,
 #        "border_radius": Spacing.BASE.value,
 #        "color": TextColor.LIGHT.value,
-#        "background_color": Color.PURPLE.value,
+#        "background_color": Color.INDIGO.value,
 #        "_hover": {
 #            "background_color": Color.YELLOW.value
 #        },
@@ -261,7 +266,7 @@ navbar_title_style = dict(
 #        "padding": Spacing.SM.value,
 #        "border_radius": Spacing.BASE.value,
 #        "color": TextColor.LIGHT.value,
-#        "background_color": Color.PURPLE.value,
+#        "background_color": Color.INDIGO.value,
 #        "_hover": {}
 #    },
 #    rx.link: {
