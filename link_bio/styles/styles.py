@@ -14,7 +14,7 @@ MAX_WIDTH = "560px"
 # Reflex / Radix Themes definen escalas de 1 a 9
 # para tipografía, espaciado, etc.
 
-# Tamaños de heading y texto (1 = pequeño, 9 = muy grande)
+# Tamaños de heading y texto (1 = pequeño, 9 = muy grande) # Utilizados: BASE, SM, XL
 class TextSize(Enum):
     XS = "1"   # Muy pequeño
     SM = "2"
@@ -113,11 +113,10 @@ BASE_STYLE = {
 
     # Contenido expandido del acordeón
     rx.accordion.content: {
-    "padding_top": Spacing_CSS.XS.value,
-    "padding_right": Spacing_CSS.SM.value,
+    "padding_top": Spacing_CSS.ZERO.value,
+    "padding_right": Spacing_CSS.XS.value,
     "padding_bottom": Spacing_CSS.XS.value,
-    "padding_left": Spacing_CSS.SM.value,
-
+    "padding_left": Spacing_CSS.XL.value,
     "background_color": Color.INDIGO.value, 
     "color": TextColor.LIGHT.value,
 },
@@ -158,8 +157,9 @@ tittle_style = dict(
 )
 
 navbar_title_style = dict(
-    font_family=Font.DEFAULT.value,
-    size=TextSize.XXXL.value, # usamos token oficial
+    font_family = Font.DEFAULT.value,
+    size = TextSize.XXXL.value,
+    color = Color.LIGHT.value,
     weight = "bold"
 )
  

@@ -14,8 +14,7 @@ def header() -> rx.Component:
             rx.box("ARB",
                 color=Color.LIGHT.value,
                 bg=Color.DARK.value,
-                font_family="monospace",
-                font_size="2em", # Propiedad de CSS en em, no es un token de Reflex.
+                font_size=TextSize.SM.value, # Propiedad de CSS en em, no es un token de Reflex.
                 width="80px",
                 height="80px",
                 display="flex",
@@ -57,11 +56,12 @@ def header() -> rx.Component:
             
         ),
         rx.hstack(
-            info_text("Desarrollos en Python", "center"),
+            info_text("Python friendly", "center"),
             info_text("ML & MLOPS", "center"),   
             info_text("Estadística práctica", "center"),      
-            spacing= "9",
-            width="100%"
+            # spacing= "9",
+            width="100%",
+            justify = "between"
         ),
         rx.text(
             """Desarrollo de aplicaciones basadas en datos con Python y diferentes tecnologías.

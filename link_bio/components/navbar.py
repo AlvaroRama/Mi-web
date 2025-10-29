@@ -5,8 +5,7 @@ from link_bio.styles.fonts import Font
 def navbar() -> rx.Component:
     return rx.hstack(
         rx.box(
-            rx.text("FORGING DATA", 
-                    color=Color.LIGHT.value,
+            rx.text("FORGING DATA",
                     **navbar_title_style),
         ), 
         position="sticky",

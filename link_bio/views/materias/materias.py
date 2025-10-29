@@ -19,6 +19,11 @@ def materias() -> rx.Component:
                         link_temas("Normalización y escalado", "/tema3"),
                         ],
         ),
+        campo_materia("Manejo y manipulación de datos",
+                      "icons/table-solid.svg",
+                      temas=[
+                        ],
+        ),
         width="100%",
         spacing=Spacing.MD.value
     )

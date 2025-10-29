@@ -8,27 +8,49 @@ from link_bio.styles.styles import Spacing as Spacing
 from link_bio.styles.styles import button_title_style as button_title_style
 from link_bio.styles.styles import button_body_style as button_body_style
 
-
+    
 def link_temas(tittle: str, url: str) -> rx.Component:
-    return rx.link(
-            rx.hstack(
-                rx.spacer(),
-                rx.image(src = "icons/chevron-right-solid.svg",
-                         width=styles.IconSize.SM.value,
-                         height=styles.IconSize.SM.value
-                         ),
-                rx.vstack(
-                    rx.text(tittle,
-                            **button_body_style,
-                           ),
-                    spacing= Spacing.MD.value,
-                    width = "100%",
-                    justify = "center",
-                    margin = Spacing.ZERO.value
+    return rx.hstack(
+            rx.image(src ="icons/chevron-right-solid.svg",
+                width=styles.IconSize.SM.value,
+                height=styles.IconSize.SM.value
+            ),
+            rx.link(
+                rx.text(tittle,
+                    **button_body_style,
+                    _hover = {"color": Color.LIGHT.value}
+                    
                 ),
+                href = url,
+                is_external = True
+            ),
+            spacing= Spacing.XS.value,
+            width = "100%",
+            justify = "start",
             align="center", # Alinear icono y texto verticalmente
-        ),
-        href = url,
-        is_external = True,
-        width = "100%",  
-    )
+        )
+    
+    
+
+#def link_temas(tittle: str, url: str) -> rx.Component:
+#    return rx.link(
+#            rx.hstack(
+#                rx.spacer(),
+#                rx.image(src = "icons/chevron-right-solid.svg",
+#                         width=styles.IconSize.SM.value,
+#                         height=styles.IconSize.SM.value
+#                         ),
+#              
+#                rx.text(tittle,
+#                            **button_body_style,
+#                        ),
+#            spacing= Spacing.MD.value,
+#            width = "100%",
+#            justify = "start",
+#            margin = Spacing.ZERO.value,
+#            # align="center", # Alinear icono y texto verticalmente
+#        ),
+#        href = url,
+#        is_external = True,
+#        width = "100%",  
+#    )
