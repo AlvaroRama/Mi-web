@@ -1,11 +1,15 @@
 import reflex as rx
 from link_bio.components.link_icon import link_icon
 from link_bio.components.info_text import info_text
+
 from link_bio.styles.styles import TextSize as TextSize
+from link_bio.styles.styles import Spacing as Spacing
+from link_bio.styles.styles import heading_style
+from link_bio.styles.styles import texto_base_style
+
 from link_bio.styles.colors import TextColor as TextColor
 from link_bio.styles.colors import Color as Color
-from link_bio.styles.styles import Spacing as Spacing
-from link_bio.styles.fonts import Font as Font
+
 import link_bio.constants as constants
 
 def header() -> rx.Component:
@@ -27,8 +31,7 @@ def header() -> rx.Component:
             rx.vstack(
                 rx.heading(
                     "Álvaro Rama Benedicto",
-                    #size = TextSize.XL.value,
-                    color = TextColor.LIGHT.value,
+                    **heading_style,
                     trim="both"
                     
                 ),
@@ -36,8 +39,7 @@ def header() -> rx.Component:
                         size = TextSize.SM.value,
                         # trim="start",  # Elimina espacios al principio
                         align="center",
-                        width="100%",
-                        color = TextColor.LIGHT.value                  
+                        width="100%",               
                 ),
                 rx.hstack(
                     link_icon(constants.LINKEDIN_URL,"icons/linkedin.svg"),
@@ -49,7 +51,6 @@ def header() -> rx.Component:
                                       
                 ),
                 spacing=Spacing.SM.value,
-                color = TextColor.LIGHT.value
             ),
             align="center",
             width="100%"
@@ -59,15 +60,12 @@ def header() -> rx.Component:
             info_text("Python friendly", "center"),
             info_text("ML & MLOPS", "center"),   
             info_text("Estadística práctica", "center"),      
-            # spacing= "9",
             width="100%",
             justify = "between"
         ),
         rx.text(
             """Desarrollo de aplicaciones basadas en datos con Python y diferentes tecnologías.
                 Esta es mi web con publicaciones orientadas al aprendizaje automático.""",
-                color=TextColor.LIGHT.value,
-                size = TextSize.SM.value,
                 ),
         align_items = "start"
     )

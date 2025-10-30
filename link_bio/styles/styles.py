@@ -12,7 +12,7 @@ MAX_WIDTH = "560px"
 # Fuentes:
 
 STYLESHEETS = [
-    "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;700&display=swap"
+    "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;500;700&display=swap"
 ]
 
 # -----------------------------
@@ -77,8 +77,9 @@ class ImageSize(Enum):
 # -----------------------------
 BASE_STYLE = {
     "font_family": Font.DEFAULT.value,
-    "font_weight": FontWeight.MEDIUM.value,
+    "font_weight": FontWeight.LIGHT.value,
     "background_color": Color.DARK.value,
+    
 
     # -----------------------------
     # BOTONES
@@ -143,35 +144,41 @@ BASE_STYLE = {
 # -----------------------------
 # ESTILOS ESPECÍFICOS
 # -----------------------------
-button_title_style = dict(
-    size=TextSize.BASE.value,
-    color=TextColor.DARK.value,
-    font_family=Font.DEFAULT.value,
-    font_weight = FontWeight.MEDIUM.value,
-    weight = "bold"
-)
 
-button_body_style = dict(
-    size=TextSize.MD.value,
-    color=TextColor.DARK.value,
-    font_family=Font.DEFAULT.value,
+texto_base_style = dict(
+    size=TextSize.BASE.value)
+
+heading_style = dict(
     font_weight = FontWeight.MEDIUM.value,
-    weight = "bold"
+    size=TextSize.XL.value 
 )
 
 tittle_style = dict(
-    width="100%",
     padding_top=Spacing.BASE.value,
-    color=TextColor.LIGHT.value,
     font_family=Font.DEFAULT.value,
     font_weight = FontWeight.MEDIUM.value,
+    size=TextSize.XL.value
+)
+
+button_title_style = dict(
+    color=TextColor.DARK.value,
+    font_family=Font.DEFAULT.value,
+    font_weight = FontWeight.MEDIUM.value,
+    size=TextSize.LG.value
+)
+
+button_body_style = dict(
+    color=TextColor.DARK.value,
+    font_family=Font.DEFAULT.value,
+    font_weight = FontWeight.MEDIUM.value,
+    size=TextSize.BASE.value
 )
 
 navbar_title_style = dict(
     font_family = Font.DEFAULT.value,
     font_weight = FontWeight.HIGHT.value,
-    size = TextSize.XXXL.value,
     color = Color.LIGHT.value,
+    size = TextSize.XL.value
 )
  
 ######################################## ANTIGUO, MEZCLA DE CSS Y REFLEX ########################################

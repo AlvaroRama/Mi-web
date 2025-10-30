@@ -5,7 +5,6 @@ def tittle(text: str) -> rx.Component:
     return rx.heading(
         text,
         **tittle_style,
-        size=TextSize.XL.value,      # Token oficial Reflex
     )
 
 
