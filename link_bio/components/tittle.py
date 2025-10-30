@@ -1,5 +1,6 @@
 import reflex as rx
-from link_bio.styles.styles import TextSize, Spacing, tittle_style
+
+from link_bio.styles.styles import tittle_style
 
 def tittle(text: str) -> rx.Component:
     return rx.heading(

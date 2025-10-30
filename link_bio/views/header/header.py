@@ -2,12 +2,8 @@ import reflex as rx
 from link_bio.components.link_icon import link_icon
 from link_bio.components.info_text import info_text
 
-from link_bio.styles.styles import TextSize as TextSize
-from link_bio.styles.styles import Spacing as Spacing
-from link_bio.styles.styles import heading_style
-from link_bio.styles.styles import texto_base_style
+from link_bio.styles.styles import TextSize, Spacing, heading_style, texto_base_style
 
-from link_bio.styles.colors import TextColor as TextColor
 from link_bio.styles.colors import Color as Color
 
 import link_bio.constants as constants
@@ -66,6 +62,7 @@ def header() -> rx.Component:
         rx.text(
             """Desarrollo de aplicaciones basadas en datos con Python y diferentes tecnologías.
                 Esta es mi web con publicaciones orientadas al aprendizaje automático.""",
+                **texto_base_style,
                 ),
         align_items = "start"
     )

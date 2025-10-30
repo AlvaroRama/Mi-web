@@ -1,8 +1,10 @@
 import reflex as rx
+
 from link_bio.components.link_buttom import link_buttom
 from link_bio.components.tittle import tittle
 
 from link_bio.styles.styles import Spacing
+
 import link_bio.constants as const
 
 def links() -> rx.Component:

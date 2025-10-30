@@ -1,6 +1,7 @@
 import reflex as rx
-from link_bio.styles.styles import TextSize, Spacing, Color, navbar_title_style
-from link_bio.styles.fonts import Font
+
+from link_bio.styles.styles import Spacing , navbar_title_style
+
 
 def navbar() -> rx.Component:
     return rx.hstack(

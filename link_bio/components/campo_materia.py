@@ -1,12 +1,7 @@
 import reflex as rx
 
-import link_bio.styles.styles as styles
+from link_bio.styles.styles import IconSize , Spacing, Color, button_title_style
 
-from link_bio.styles.styles import Spacing as Spacing
-
-from link_bio.styles.colors import Color as Color
-
-from link_bio.styles.styles import button_title_style as button_title_style
 
 # Estado global para todos los acordeones
 class AccordionState(rx.State): # Clase que el estado reactivo que maneja reflex. Sus atributos son VARIABLES REACTIVAS no objetos python.
@@ -31,11 +26,12 @@ def campo_materia(title: str, imagen_tema: str, temas: list[rx.Component] | None
                     rx.hstack(
                         rx.image(
                             src=imagen_tema,
-                            width=styles.IconSize.MD.value,
-                            height=styles.IconSize.MD.value,
+                            width= IconSize.MD.value,
+                            height= IconSize.MD.value,
                         ),
-                        rx.text(title, **button_title_style),
-                        spacing=styles.Spacing.SM.value,
+                        rx.text(title,
+                                **button_title_style),
+                        spacing= Spacing.SM.value,
                         align="center",
                     ),
                     # Bloque derecho: icono dinámico
@@ -45,10 +41,9 @@ def campo_materia(title: str, imagen_tema: str, temas: list[rx.Component] | None
                             "chevron-up",
                             "chevron-down"
                         ),
-                        width=styles.IconSize.MD.value,
-                        height=styles.IconSize.MD.value,
-                        color=Color.DARK.value,
-                        bold=True,
+                        width = IconSize.MD.value,
+                        height = IconSize.MD.value,
+                        color = Color.DARK.value,
                     ),
                     justify="between",
                     align="center",
@@ -59,7 +54,7 @@ def campo_materia(title: str, imagen_tema: str, temas: list[rx.Component] | None
             rx.accordion.content(
                 rx.vstack(
                     *temas if temas else [rx.text("En construcción")],
-                    spacing=styles.Spacing.SM.value,
+                    spacing = Spacing.SM.value,
                     width="100%",
                     align="start",
                 ),

@@ -1,11 +1,14 @@
 import reflex as rx
-from link_bio.components.navbar import navbar
+
 from link_bio.views.header.header import header
 from link_bio.views.links.links import links
-from link_bio.components.footer import footer
 from link_bio.views.materias.materias import materias
-import link_bio.styles.styles as styles
-from link_bio.styles.styles import Spacing as Spacing
+
+from link_bio.components.navbar import navbar
+from link_bio.components.footer import footer
+
+
+from link_bio.styles.styles import MAX_WIDTH, Spacing, BASE_STYLE, STYLESHEETS
 
 
 class State(rx.State):
@@ -19,15 +22,6 @@ class State(rx.State):
 """Defines la función de página llamada index. 
 - Cada página en Reflex es una función que devuelve componentes """
 
-# link_bio/link_bio.py (Añadir al inicio)
-
-# Definición de la URL de las fuentes de Google
-# Combinamos ambas fuentes en una sola petición para optimizar la carga
-# GOOGLE_FONTS_URL = "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Press+Start+2P&display=swap"
-
-GOOGLE_FONTS_URL = "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Silkscreen&display=swap"
-
-
 def index() -> rx.Component:
     return rx.flex(
         navbar(),
@@ -36,7 +30,7 @@ def index() -> rx.Component:
                 header(),
                 materias(),
                 links(),
-                max_width = styles.MAX_WIDTH,  # Ancho máximo del contenedor
+                max_width = MAX_WIDTH,  # Ancho máximo del contenedor
                 width = "100%",
                 margin_y = Spacing.XL.value,  # Espacio vertical entre bloques
             )
@@ -59,10 +53,10 @@ def index() -> rx.Component:
 - La configuración global (tema, estilos, etc., si quisieras añadirla)"""
 
 app = rx.App(
-    style = styles.BASE_STYLE,
+    style = BASE_STYLE,
     # Carga directa de la URL de Google Fonts.
     #stylesheets = [GOOGLE_FONTS_URL]
-    stylesheets = styles.STYLESHEETS
+    stylesheets = STYLESHEETS
 )
 
 """Registras la página index en la aplicación.

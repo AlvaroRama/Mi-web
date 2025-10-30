@@ -1,21 +1,16 @@
 import reflex as rx
+
 from typing import Optional
-import link_bio.styles.styles as styles
 
-from link_bio.styles.colors import TextColor as TextColor
-from link_bio.styles.colors import Color as Color
-from link_bio.styles.styles import Spacing as Spacing
-from link_bio.styles.styles import button_title_style as button_title_style
-from link_bio.styles.styles import button_body_style as button_body_style
-
+from link_bio.styles.styles import Spacing, IconSize, button_title_style, button_body_style
 
 def link_buttom(tittle: str, url: str, imagen: str, body: Optional[str] = None ) -> rx.Component:
     return rx.link(
         rx.button(
             rx.hstack(
                 rx.image(src = imagen,
-                         width=styles.IconSize.MD.value,
-                         height=styles.IconSize.MD.value
+                         width = IconSize.MD.value,
+                         height = IconSize.MD.value
                          ),
                 rx.vstack(
                     rx.text(tittle,

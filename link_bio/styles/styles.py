@@ -79,6 +79,7 @@ BASE_STYLE = {
     "font_family": Font.DEFAULT.value,
     "font_weight": FontWeight.LIGHT.value,
     "background_color": Color.DARK.value,
+    "color": TextColor.LIGHT.value,
     
 
     # -----------------------------
@@ -133,10 +134,10 @@ BASE_STYLE = {
     # -----------------------------
     # ENLACES
     # -----------------------------
-    rx.link: {
-        "text_decoration": "none",
-        "_hover": {},
-    },
+    #rx.link: {
+        #"text_decoration": "none",
+        #"_hover": {},
+    #},
 }
 
 
@@ -177,7 +178,6 @@ button_body_style = dict(
 navbar_title_style = dict(
     font_family = Font.DEFAULT.value,
     font_weight = FontWeight.HIGHT.value,
-    color = Color.LIGHT.value,
     size = TextSize.XL.value
 )
  

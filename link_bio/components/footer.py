@@ -1,21 +1,21 @@
 import reflex as rx
+
 import datetime
-from link_bio.styles.styles import TextSize as TextSize
-from link_bio.styles.styles import button_body_style
-from link_bio.styles.styles import Spacing as Spacing
-from link_bio.styles.styles import ImageSize as ImageSize
-from link_bio.styles.colors import TextColor as TextColor
+
+from link_bio.styles.styles import Spacing, ImageSize
+
+
 
 
 def footer() -> rx.Component:
     return rx.vstack(
         rx.vstack(
             rx.text("Web realizada con tecnología Reflex",
-                **button_body_style,
                 trim="both"
             ),
             rx.link(
                 rx.image(src = "favicon.ico",
+                         ImageSize = ImageSize.AVATAR,
                          style={"margin": "0 auto",
                                 "display": "block"}# Imagen centrada en el footer por css. Patron para centrar imagenes.
                 ),
@@ -25,7 +25,7 @@ def footer() -> rx.Component:
             align= "center",
             justify = "center"
         ),
-
+        # No descubro porqué el link sale en azul si en styles.py he puesto que no tuviera decoración y no cambiara de color al pasar el ratón por encima?
         rx.link(
             f"© 2023-{datetime.date.today().year} Álvaro Rama Benedicto",
             href = "https://www.linkedin.com/in/alvaro-rama-benedicto-538603b4/?originalSubdomain=es",
@@ -33,8 +33,7 @@ def footer() -> rx.Component:
         ),
         margin_buttom = Spacing.LG.value,
         align="center",
-        margin_top=Spacing.XL.value,
-        color=TextColor.LIGHT.value
+        margin_top=Spacing.XL.value
     )
 
 
