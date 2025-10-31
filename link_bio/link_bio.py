@@ -8,7 +8,7 @@ from link_bio.components.navbar import navbar
 from link_bio.components.footer import footer
 
 
-from link_bio.styles.styles import MAX_WIDTH, Spacing, BASE_STYLE, STYLESHEETS
+from link_bio.styles.styles import MAX_WIDTH, Spacing_CSS, BASE_STYLE, STYLESHEETS
 
 
 class State(rx.State):
@@ -32,16 +32,14 @@ def index() -> rx.Component:
                     materias(),
                     links(),
                     max_width = MAX_WIDTH,  # Ancho máximo del contenedor
-                    width = "100%",
-                    margin_y = Spacing.XL.value,  # Espacio vertical entre bloques
-                )
+                ),
+                margin_y = Spacing_CSS.BASE.value
             ),
             footer(),
-            #direction = "column",
-            #spacing = Spacing.BASE.value
+            direction = "column",
         ),
         direction = "column",
-        spacing = Spacing.BASE.value
+        stack_children_full_width = True
             #align="center",   # alinear horizontalmente
             #justify="center", # alinear verticalmente
             #spacing="2em",    # espacio entre bloques

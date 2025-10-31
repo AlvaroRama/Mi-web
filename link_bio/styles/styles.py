@@ -67,6 +67,7 @@ class IconSize(Enum):
     XL = "48px"
 
 class ImageSize(Enum):
+    MINI = "16px"
     AVATAR = "64px"
     THUMBNAIL = "128px"
     HERO = "100%"
@@ -188,6 +189,11 @@ navbar_title_style = dict(
     font_family = Font.DEFAULT.value,
     font_weight = FontWeight.HIGHT.value,
     size = TextSize.XL.value
+)
+
+image_footer_style = dict(
+    width =  "4em",
+    height =  "auto"
 )
  
 ######################################## ANTIGUO, MEZCLA DE CSS Y REFLEX ########################################
