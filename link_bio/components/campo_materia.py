@@ -1,6 +1,6 @@
 import reflex as rx
 
-from link_bio.styles.styles import IconSize , Spacing, Color, button_title_style
+from link_bio.styles.styles import IconSize , Spacing, Color, button_title_style, Spacing_CSS
 
 
 # Estado global para todos los acordeones
@@ -33,6 +33,7 @@ def campo_materia(title: str, imagen_tema: str, temas: list[rx.Component] | None
                                 **button_title_style),
                         spacing= Spacing.SM.value,
                         align="center",
+                        padding_right = Spacing_CSS.ZERO.value, # Añadido por responsive
                     ),
                     # Bloque derecho: icono dinámico
                     rx.icon(

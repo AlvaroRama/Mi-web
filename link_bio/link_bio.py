@@ -25,24 +25,28 @@ class State(rx.State):
 def index() -> rx.Component:
     return rx.flex(
         navbar(),
-        rx.center(
-            rx.vstack(
-                header(),
-                materias(),
-                links(),
-                max_width = MAX_WIDTH,  # Ancho máximo del contenedor
-                width = "100%",
-                margin_y = Spacing.XL.value,  # Espacio vertical entre bloques
-            )
+        rx.container(
+            rx.center(
+                rx.vstack(
+                    header(),
+                    materias(),
+                    links(),
+                    max_width = MAX_WIDTH,  # Ancho máximo del contenedor
+                    width = "100%",
+                    margin_y = Spacing.XL.value,  # Espacio vertical entre bloques
+                )
+            ),
+            footer(),
+            #direction = "column",
+            #spacing = Spacing.BASE.value
         ),
-        footer(),
-    direction = "column",
-    spacing = Spacing.BASE.value
+        direction = "column",
+        spacing = Spacing.BASE.value
+            #align="center",   # alinear horizontalmente
+            #justify="center", # alinear verticalmente
+            #spacing="2em",    # espacio entre bloques
+            #width="100%"      # ocupar todo el anch
     )
-        #align="center",   # alinear horizontalmente
-        #justify="center", # alinear verticalmente
-        #spacing="2em",    # espacio entre bloques
-        #width="100%"      # ocupar todo el anch
 
  # Llama al componente de la barra de navegación
     

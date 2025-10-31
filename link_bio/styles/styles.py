@@ -23,15 +23,15 @@ STYLESHEETS = [
 
 # Tamaños de heading y texto (1 = pequeño, 9 = muy grande) # Utilizados: BASE, SM, XL
 class TextSize(Enum):
-    XS = "1"   # Muy pequeño
+    ZERO = "0"
+    XS = "1"
     SM = "2"
-    MD = "3"
-    BASE = "4" # Tamaño por defecto
+    BASE = "3"
+    MD = "4"
     LG = "5"
     XL = "6"
     XXL = "7"
     XXXL = "8"
-    HUGE = "9" # Más grande posible
 
 
 # Espaciados (márgenes, paddings, gaps)
@@ -88,14 +88,15 @@ BASE_STYLE = {
     rx.button: {
         "width": "100%",
         "height": "100%",
-        "display": "block",
         "padding": Spacing_CSS.SM.value,
         "border_radius": Spacing_CSS.SM.value,
         "color": TextColor.LIGHT.value,
         "background_color": Color.INDIGO.value,
-        "_hover": {
-            "background_color": Color.INDIGO.value,
-        },
+        "_hover": {"background_color": Color.INDIGO.value,},
+        "justify_content": "flex-start",
+        "text_align": "left",
+        "white_space" : "normal", # Fuerza que al haceer pequeña la pantalla se haga multilinea
+        
     },
 
     # -----------------------------
@@ -106,7 +107,8 @@ BASE_STYLE = {
         "width": "100%",
         "border_radius": Spacing_CSS.SM.value,
         "background_color": Color.INDIGO.value,
-        "overflow": "hidden",  # evita que sobresalga el borde al expandir
+        "overflow": "hidden",
+        # evita que sobresalga el borde al expandir
     },
 
     # Trigger (la parte clicable, equivalente al botón)
@@ -114,6 +116,9 @@ BASE_STYLE = {
         #"width": "100%",
         "padding": Spacing_CSS.SM.value,
         "display": "flex",
+        "justify_content": "flex-start",
+        "text_align": "left",
+        "white_space" : "normal",
         #"align_items": "left", No parece tener efecto.
         #"gap": Spacing.XXXL.value, No parece tener efecto
         "background_color": Color.INDIGO.value,
@@ -123,12 +128,15 @@ BASE_STYLE = {
 
     # Contenido expandido del acordeón
     rx.accordion.content: {
-    "padding_top": Spacing_CSS.ZERO.value,
-    "padding_right": Spacing_CSS.XS.value,
-    "padding_bottom": Spacing_CSS.XS.value,
-    "padding_left": Spacing_CSS.XL.value,
-    "background_color": Color.INDIGO.value, 
-    "color": TextColor.LIGHT.value,
+        "padding_top": Spacing_CSS.ZERO.value,
+        "padding_right": Spacing_CSS.XS.value,
+        "padding_bottom": Spacing_CSS.XS.value,
+        "padding_left": Spacing_CSS.XL.value,
+        "background_color": Color.INDIGO.value, 
+        "color": TextColor.LIGHT.value,
+        "justify_content": "flex-start",
+        "text_align": "left",
+        "white_space" : "normal",
 },
 
     # -----------------------------
@@ -165,14 +173,15 @@ button_title_style = dict(
     color=TextColor.DARK.value,
     font_family=Font.DEFAULT.value,
     font_weight = FontWeight.MEDIUM.value,
-    size=TextSize.LG.value
+    size=TextSize.LG.value,
+
 )
 
 button_body_style = dict(
     color=TextColor.DARK.value,
     font_family=Font.DEFAULT.value,
     font_weight = FontWeight.MEDIUM.value,
-    size=TextSize.BASE.value
+    size=TextSize.BASE.value,
 )
 
 navbar_title_style = dict(

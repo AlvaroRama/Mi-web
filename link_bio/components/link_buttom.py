@@ -22,7 +22,6 @@ def link_buttom(tittle: str, url: str, imagen: str, body: Optional[str] = None )
                             ),
                     spacing= Spacing.MD.value,
                     width = "100%",
-                    justify = "center",
                     margin = Spacing.ZERO.value
                     
                 ),

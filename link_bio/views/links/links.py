@@ -15,7 +15,7 @@ def links() -> rx.Component:
                     "icons/linkedin_oscuro.svg"
                     ),
         tittle("Contacto"),
-        link_buttom("Para cualquier cosa...escribeme!",
+        link_buttom("Para cualquier cosa... escribeme!",
                     f"mailto:{const.GMAIL}",
                     "icons/correo_oscuro.svg"),
         width="100%",
