@@ -28,6 +28,7 @@ def campo_materia(title: str, imagen_tema: str, temas: list[rx.Component] | None
                             src=imagen_tema,
                             width= IconSize.MD.value,
                             height= IconSize.MD.value,
+                            alt = "Ícono de " + title,
                         ),
                         rx.text(title,
                                 **button_title_style),

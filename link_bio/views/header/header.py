@@ -38,9 +38,9 @@ def header() -> rx.Component:
                         width="100%",               
                 ),
                 rx.hstack(
-                    link_icon(constants.LINKEDIN_URL,"icons/linkedin.svg"),
-                    link_icon(constants.LINKEDIN_URL,"icons/github.svg"),
-                    link_icon(constants.LINKEDIN_URL,"icons/kaggle.svg"),
+                    link_icon(constants.LINKEDIN_URL,"icons/linkedin.svg", "LinkedIn"),
+                    link_icon(constants.GITHUB,"icons/github.svg", "GitHub"),
+                    link_icon(constants.KAGGLE,"icons/kaggle.svg", "Kaggle"),
                     width="100%",
                     justify="center",
                     spacing = Spacing.HUGE.value

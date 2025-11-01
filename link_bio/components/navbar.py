@@ -1,6 +1,6 @@
 import reflex as rx
 
-from link_bio.styles.styles import Spacing , navbar_title_style
+from link_bio.styles.styles import Spacing_CSS , navbar_title_style
 
 
 def navbar() -> rx.Component:
@@ -11,8 +11,8 @@ def navbar() -> rx.Component:
         ), 
         position="sticky",
         bg="linear-gradient(to right, black, #3358D4)",
-        padding_x=Spacing.XL.value,
-        padding_y=Spacing.XL.value,
+        padding_x=Spacing_CSS.MD.value,
+        padding_y=Spacing_CSS.MD.value,
         width="100%",
         top=0,
         z_index=999

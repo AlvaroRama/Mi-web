@@ -13,8 +13,9 @@ def footer() -> rx.Component:
                 rx.image(src = "favicon.ico",
                         style={"margin": "0 auto",
                                 "display": "block"},# Imagen centrada en el footer por css. Patron para centrar imagenes.
-                        width = ImageSize.MINI.value,
-                        height = ImageSize.MINI.value
+                        height = "auto",
+                        wheight = "auto",
+                        alt = "Reflex Logo",
                 ),
                 href="https://reflex.dev/",
                 is_external = True,

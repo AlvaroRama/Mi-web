@@ -10,7 +10,8 @@ def link_buttom(tittle: str, url: str, imagen: str, body: Optional[str] = None )
             rx.hstack(
                 rx.image(src = imagen,
                          width = IconSize.MD.value,
-                         height = IconSize.MD.value
+                         height = IconSize.MD.value,
+                         alt = f"Icono de {tittle}",
                          ),
                 rx.vstack(
                     rx.text(tittle,

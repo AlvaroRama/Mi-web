@@ -11,7 +11,8 @@ def link_temas(tittle: str, url: str) -> rx.Component:
     return rx.hstack(
             rx.image(src ="icons/chevron-right-solid.svg",
                 width=IconSize.SM.value,
-                height=IconSize.SM.value
+                height=IconSize.SM.value,
+                alt= "Icono de flecha derecha",
             ),
             rx.link(
                 rx.text(tittle,
