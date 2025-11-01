@@ -54,9 +54,9 @@ def header() -> rx.Component:
             
         ),
         rx.hstack(
-            info_text("Python friendly", "center"),
-            info_text("ML & MLOPS", "center"),   
-            info_text("Estadística práctica", "center"),      
+            info_text("Python friendly"),
+            info_text("ML & MLOPS"),
+            info_text("Estadística práctica"),     
             width="100%",
             justify = "between"
         ),
@@ -64,8 +64,9 @@ def header() -> rx.Component:
             """Desarrollo de aplicaciones basadas en datos con Python y diferentes tecnologías.
                 Esta es mi web con publicaciones orientadas al aprendizaje automático.""",
                 **texto_base_style,
+                width="100%",
+                align= "center"
                 ),
-        align_items = "start"
     )
 
 rx.grid()

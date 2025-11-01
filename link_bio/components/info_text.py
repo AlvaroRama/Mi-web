@@ -3,12 +3,12 @@ import reflex as rx
 from link_bio.styles.styles import texto_base_style
 
 
-def info_text(body: str, *align: str) -> rx.Component:
+def info_text(body: str) -> rx.Component:
     return rx.text(body,
-                   as_= "span",
-                   **texto_base_style,
-                   weight = "bold"
-                   
+                as_= "span",
+                **texto_base_style,
+                weight = "bold",
+                align= "center",
     )
 
 
