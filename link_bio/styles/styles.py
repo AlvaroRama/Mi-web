@@ -92,7 +92,7 @@ BASE_STYLE = {
         "padding": Spacing_CSS.SM.value,
         "border_radius": Spacing_CSS.SM.value,
         "color": TextColor.LIGHT.value,
-        "background_color": Color.INDIGO.value,
+        "background_color": Color.PRIMARY.value,
         "_hover": {"background_color": Color.INDIGO.value,},
         "justify_content": "flex-start",
         "text_align": "left",
@@ -107,7 +107,7 @@ BASE_STYLE = {
     rx.accordion.item: {
         "width": "100%",
         "border_radius": Spacing_CSS.SM.value,
-        "background_color": Color.INDIGO.value,
+        "background_color": Color.PRIMARY.value,
         "overflow": "hidden",
         # evita que sobresalga el borde al expandir
     },
@@ -122,7 +122,7 @@ BASE_STYLE = {
         "white_space" : "normal",
         #"align_items": "left", No parece tener efecto.
         #"gap": Spacing.XXXL.value, No parece tener efecto
-        "background_color": Color.INDIGO.value,
+        "background_color": Color.PRIMARY.value,
         "border_radius": Spacing_CSS.SM.value,
         "cursor": "pointer",
     },
@@ -133,7 +133,7 @@ BASE_STYLE = {
         "padding_right": Spacing_CSS.XS.value,
         "padding_bottom": Spacing_CSS.XS.value,
         "padding_left": Spacing_CSS.XL.value,
-        "background_color": Color.INDIGO.value, 
+        "background_color": Color.PRIMARY.value, 
         "color": TextColor.LIGHT.value,
         "justify_content": "flex-start",
         "text_align": "left",
@@ -171,7 +171,7 @@ tittle_style = dict(
 )
 
 button_title_style = dict(
-    color=TextColor.DARK.value,
+    color=TextColor.DARK.value, 
     font_family=Font.DEFAULT.value,
     font_weight = FontWeight.MEDIUM.value,
     size=TextSize.LG.value,

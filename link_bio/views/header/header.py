@@ -10,7 +10,7 @@ import link_bio.constants as constants
 
 def header() -> rx.Component:
     return rx.vstack(
-        rx.hstack(
+        rx.vstack(
             rx.box("ARB",
                 color=Color.LIGHT.value,
                 bg=Color.DARK.value,
@@ -49,6 +49,7 @@ def header() -> rx.Component:
                 spacing=Spacing.SM.value,
             ),
             align="center",
+
             width="100%"
             
         ),
@@ -67,8 +68,8 @@ def header() -> rx.Component:
         align_items = "start"
     )
 
-
-
+rx.grid()
+grid_template_columns = [1]
 
 #
 #def header() -> rx.Component:

@@ -40,14 +40,7 @@ def index() -> rx.Component:
         ),
         direction = "column",
         stack_children_full_width = True
-            #align="center",   # alinear horizontalmente
-            #justify="center", # alinear verticalmente
-            #spacing="2em",    # espacio entre bloques
-            #width="100%"      # ocupar todo el anch
     )
-
- # Llama al componente de la barra de navegación
-    
 
 """Creas la aplicación de Reflex. Este objeto coordina:
 - El registro de páginas y rutas
@@ -56,9 +49,7 @@ def index() -> rx.Component:
 
 app = rx.App(
     style = BASE_STYLE,
-    # Carga directa de la URL de Google Fonts.
-    #stylesheets = [GOOGLE_FONTS_URL]
-    stylesheets = STYLESHEETS
+    stylesheets = STYLESHEETS # Carga directa de la URL de Google Fonts.
 )
 
 """Registras la página index en la aplicación.
