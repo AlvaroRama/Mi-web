@@ -69,9 +69,6 @@ def header() -> rx.Component:
                 ),
     )
 
-rx.grid()
-grid_template_columns = [1]
-
 #
 #def header() -> rx.Component:
 #    return rx.center(   # este center envuelve TODO el header

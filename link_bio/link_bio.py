@@ -1,8 +1,8 @@
 import reflex as rx
 
-from link_bio.views.header.header import header
-from link_bio.views.links.links import links
-from link_bio.views.materias.materias import materias
+from link_bio.views.header import header
+from link_bio.views.links import links
+from link_bio.views.materias import materias
 
 from link_bio.components.navbar import navbar
 from link_bio.components.footer import footer
@@ -47,10 +47,27 @@ def index() -> rx.Component:
 - La compilación del frontend (Next.js/React) y el backend (FastAPI)
 - La configuración global (tema, estilos, etc., si quisieras añadirla)"""
 
+
+# Sustituye "G-XXXXXXXXXX" por tu ID de Google Tag Manager cuando lo tengas
+GA_TAG_ID = "G-XXXXXXXXXX" #PENDIENTE TAG Y METERLO COMO VARIABLE DE ENTORNO
+
 app = rx.App(
+    stylesheets = STYLESHEETS,
     style = BASE_STYLE,
-    stylesheets = STYLESHEETS # Carga directa de la URL de Google Fonts.
+    head_components=[
+        rx.script(src=f"https://www.googletagmanager.com/gtag/js?id={GA_TAG_ID}"),
+        rx.script(
+            f"""
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){{dataLayer.push(arguments);}}
+            gtag('js', new Date());
+            gtag('config', '{GA_TAG_ID}');
+            """
+        ),
+    ],
 )
+
+
 
 """Registras la página index en la aplicación.
 
@@ -68,4 +85,4 @@ app.add_page(
 
 # Compilar la aplicación para generar el frontend
 
-app._compile()
+# app._compile()
