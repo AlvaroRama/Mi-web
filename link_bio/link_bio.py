@@ -24,6 +24,7 @@ class State(rx.State):
 
 def index() -> rx.Component:
     return rx.flex(
+        rx.script("document.documentElement.lang='es'"),
         navbar(),
         rx.container(
             rx.center(
@@ -76,11 +77,23 @@ Al no indicar route, Reflex la pone en la ruta raíz /.
 El nombre de la función se usa para el título por defecto.
 
 """
+title = "Alvaro Rama Benedicto | Mi web en Reflex con recursos"
+description = "Hola, mi nombre es Álvaro. Bienvenido a esta página donde espero encuentres recursos interesantes relacionados con la ciencia de datos"
+preview = "icons/hammer-solid.svg"
+
 app.add_page(
     index,    
-    title = "Alvaro Rama Benedicto | Mi web en Reflex con recursos",
-    description = "Hola, mi nombre es Álvaro. Bienvenido a esta página donde espero encuentres recursos interesantes relacionados con la ciencia de datos",
-    image = "icons/hammer-solid.svg")
+    title = title,
+    description = description,
+    image = preview,
+    meta = [
+        {"name": "og:type","content": "website"},
+        {"name": "og:title","content": title},
+        {"name": "og:description","content": description},
+        { "name": "og:image", "content": preview}
+    ]
+)
+
 
 
 # Compilar la aplicación para generar el frontend
