@@ -4,6 +4,8 @@ from link_bio.styles.styles import BASE_STYLE, STYLESHEETS
 
 from link_bio.pages.index import index
 
+from link_bio.pages.publicaciones import publicaciones
+
 
 class State(rx.State):
     """
