@@ -1,14 +1,8 @@
 import reflex as rx
 
-from link_bio.views.header import header
-from link_bio.views.links import links
-from link_bio.views.materias import materias
+from link_bio.styles.styles import BASE_STYLE, STYLESHEETS
 
-from link_bio.components.navbar import navbar
-from link_bio.components.footer import footer
-
-
-from link_bio.styles.styles import MAX_WIDTH, Spacing_CSS, BASE_STYLE, STYLESHEETS
+from link_bio.pages.index import index
 
 
 class State(rx.State):
@@ -19,29 +13,7 @@ class State(rx.State):
     # Ejemplo de variable de estado
     pass
 
-"""Defines la función de página llamada index. 
-- Cada página en Reflex es una función que devuelve componentes """
 
-def index() -> rx.Component:
-    return rx.flex(
-        rx.script("document.documentElement.lang='es'"),
-        navbar(),
-        rx.container(
-            rx.center(
-                rx.vstack(
-                    header(),
-                    materias(),
-                    links(),
-                    max_width = MAX_WIDTH,  # Ancho máximo del contenedor
-                ),
-                margin_y = Spacing_CSS.BASE.value
-            ),
-            footer(),
-            direction = "column",
-        ),
-        direction = "column",
-        stack_children_full_width = True
-    )
 
 """Creas la aplicación de Reflex. Este objeto coordina:
 - El registro de páginas y rutas
@@ -70,29 +42,56 @@ app = rx.App(
 
 
 
+
+#--------------REFACTOR--------------------
+
+#"""Defines la función de página llamada index. 
+#- Cada página en Reflex es una función que devuelve componentes """
+#
+#def index() -> rx.Component:
+#    return rx.flex(
+#        rx.script("document.documentElement.lang='es'"),
+#        navbar(),
+#        rx.container(
+#            rx.center(
+#                rx.vstack(
+#                    header(),
+#                    materias(),
+#                    links(),
+#                    max_width = MAX_WIDTH,  # Ancho máximo del contenedor
+#                ),
+#                margin_y = Spacing_CSS.BASE.value
+#            ),
+#            footer(),
+#            direction = "column",
+#        ),
+#        direction = "column",
+#        stack_children_full_width = True
+#    )
+
 """Registras la página index en la aplicación.
 
-Al no indicar route, Reflex la pone en la ruta raíz /.
+Al no indicar router, Reflex la pone en la ruta raíz /.
 
 El nombre de la función se usa para el título por defecto.
 
 """
-title = "Alvaro Rama Benedicto | Mi web en Reflex con recursos"
-description = "Hola, mi nombre es Álvaro. Bienvenido a esta página donde espero encuentres recursos interesantes relacionados con la ciencia de datos"
-preview = "icons/hammer-solid.svg"
-
-app.add_page(
-    index,    
-    title = title,
-    description = description,
-    image = preview,
-    meta = [
-        {"name": "og:type","content": "website"},
-        {"name": "og:title","content": title},
-        {"name": "og:description","content": description},
-        { "name": "og:image", "content": preview}
-    ]
-)
+#title = "Alvaro Rama Benedicto | Mi web en Reflex con recursos"
+#description = "Hola, mi nombre es Álvaro. Bienvenido a esta página donde espero encuentres recursos interesantes relacionados con la ciencia de datos"
+#preview = "icons/hammer-solid.svg"
+#
+#app.add_page(
+#    index,    
+#    title = title,
+#    description = description,
+#    image = preview,
+#    meta = [
+#        {"name": "og:type","content": "website"},
+#        {"name": "og:title","content": title},
+#        {"name": "og:description","content": description},
+#        { "name": "og:image", "content": preview}
+#    ]
+#)
 
 
 
