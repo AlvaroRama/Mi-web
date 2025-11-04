@@ -17,11 +17,10 @@ def link_temas(tittle: str, url: str) -> rx.Component:
             rx.link(
                 rx.text(tittle,
                     **button_body_style,
-                    _hover = {"color": Color.LIGHT.value}
-                    
+                    _hover = {"color": Color.LIGHT.value},
                 ),
                 href = url,
-                is_external = True
+                is_external = False
             ),
             spacing= Spacing.XS.value,
             width = "100%",

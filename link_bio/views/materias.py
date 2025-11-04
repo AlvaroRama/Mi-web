@@ -8,13 +8,15 @@ from link_bio.components.link_temas import link_temas
 
 from link_bio.styles.styles import Spacing
 
+from routes import Router as route
+
 def materias() -> rx.Component:
     return rx.vstack(
         tittle("Recursos"),
         campo_materia("Ingeniería de características",
                       "icons/hammer-solid.svg",
                       temas=[
-                        link_temas("Selección de variables", "/tema1"),
+                        link_temas("Selección de variables", route.PUBLICACIONES.value),
                         link_temas("Codificación categórica","/tema2"),
                         link_temas("Normalización y escalado", "/tema3"),
                         ],

@@ -2,20 +2,26 @@ import reflex as rx
 
 from link_bio.styles.styles import Spacing_CSS , navbar_title_style
 
+from routes import Router as route
+
 
 def navbar() -> rx.Component:
     return rx.hstack(
-        rx.box(
-            rx.text("FORGING DATA",
-                    **navbar_title_style),
+        rx.link(
+            rx.box(
+                rx.text("FORGING DATA",
+                        **navbar_title_style),
+            ),
+            href = route.INDEX.value,
+            is_external = False
         ), 
-        position="sticky",
-        bg="linear-gradient(to right, black, #3358D4)",
-        padding_x=Spacing_CSS.MD.value,
-        padding_y=Spacing_CSS.MD.value,
-        width="100%",
-        top=0,
-        z_index=999
+            position="sticky",
+            bg="linear-gradient(to right, black, #3358D4)",
+            padding_x=Spacing_CSS.MD.value,
+            padding_y=Spacing_CSS.MD.value,
+            width="100%",
+            top=0,
+            z_index=999
     )
 
 

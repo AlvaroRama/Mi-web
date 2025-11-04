@@ -8,7 +8,7 @@ from link_bio.styles.colors import Color as Color
 
 import link_bio.constants as constants
 
-def header() -> rx.Component:
+def header(details = True) -> rx.Component:
     return rx.vstack(
         rx.vstack(
             rx.box("ARB",
@@ -60,6 +60,7 @@ def header() -> rx.Component:
             width="100%",
             justify = "between"
         ),
+        rx.cond(details,
         rx.text(
             """Desarrollo de aplicaciones basadas en datos con Python y diferentes tecnologías.
                 Esta es mi web con publicaciones orientadas al aprendizaje automático.""",
@@ -67,6 +68,7 @@ def header() -> rx.Component:
                 width="100%",
                 align= "center"
                 ),
+        ),
     )
 
 #

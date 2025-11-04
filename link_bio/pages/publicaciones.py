@@ -9,10 +9,13 @@ from link_bio.views.materias import materias
 from link_bio.components.navbar import navbar
 from link_bio.components.footer import footer
 
+from routes import Router
+
 
 from link_bio.styles.styles import MAX_WIDTH, Spacing_CSS, BASE_STYLE, STYLESHEETS
 
 @rx.page(
+    route = Router.PUBLICACIONES.value,
     title = utils.index_title,
     description = utils.index_description,
     image= utils.preview,
@@ -25,7 +28,7 @@ def publicaciones() -> rx.Component:
         rx.container(
             rx.center(
                 rx.vstack(
-                    header(),
+                    header(details = False),
                     materias(),
                     links(),
                     max_width = MAX_WIDTH,  # Ancho máximo del contenedor

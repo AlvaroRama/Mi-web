@@ -186,6 +186,7 @@ button_body_style = dict(
 )
 
 navbar_title_style = dict(
+    color=TextColor.LIGHT.value, 
     font_family = Font.DEFAULT.value,
     font_weight = FontWeight.HIGHT.value,
     size = TextSize.XL.value
