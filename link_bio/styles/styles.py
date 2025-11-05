@@ -68,6 +68,8 @@ class IconSize(Enum):
 
 class ImageSize(Enum):
     MINI = "16px"
+    LOGO_MINI = "32px"
+    LOGO = "48px"
     AVATAR = "64px"
     THUMBNAIL = "128px"
     HERO = "100%"
