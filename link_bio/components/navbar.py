@@ -4,6 +4,8 @@ from link_bio.styles.styles import Spacing_CSS , navbar_title_style
 
 from routes import Router as route
 
+from link_bio.components.ant_components import float_button
+
 
 def navbar() -> rx.Component:
     return rx.hstack(
@@ -14,14 +16,15 @@ def navbar() -> rx.Component:
             ),
             href = route.INDEX.value,
             is_external = False
-        ), 
-            position="sticky",
-            bg="linear-gradient(to right, black, #3358D4)",
-            padding_x=Spacing_CSS.MD.value,
-            padding_y=Spacing_CSS.MD.value,
-            width="100%",
-            top=0,
-            z_index=999
+        ),
+        float_button(),
+        position="sticky",
+        bg="linear-gradient(to right, black, #3358D4)",
+        padding_x=Spacing_CSS.MD.value,
+        padding_y=Spacing_CSS.MD.value,
+        width="100%",
+        top=0,
+        z_index=999
     )
 
 
