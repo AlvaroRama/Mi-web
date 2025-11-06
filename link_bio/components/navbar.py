@@ -17,7 +17,7 @@ def navbar() -> rx.Component:
             href = route.INDEX.value,
             is_external = False
         ),
-        float_button(),
+        rx.desktop_only(float_button()),
         position="sticky",
         bg="linear-gradient(to right, black, #3358D4)",
         padding_x=Spacing_CSS.MD.value,
