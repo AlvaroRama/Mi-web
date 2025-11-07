@@ -6,7 +6,7 @@ from link_bio.styles.colors import Color
 # Boton flotante que asocio a la navbar:
 
 # ================================================================
-# 1️⃣ Definir una clase que envuelva el componente React
+# 1️Definir una clase que envuelva el componente React
 # ================================================================
 # Cada componente React externo debe definirse como una subclase de rx.Component.
 # La clase indica a Reflex qué librería y qué etiqueta de React debe importar.
@@ -43,7 +43,7 @@ class FloatButton(rx.Component):
 
 
 # ================================================================
-# 2️⃣ Crear una función "factory" para instanciar el componente
+# 2Crear una función "factory" para instanciar el componente
 # ================================================================
 # Reflex prohíbe instanciar directamente la clase (FloatButton(...)).
 # En su lugar, se usa FloatButton.create(**props).

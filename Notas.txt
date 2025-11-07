@@ -30,3 +30,15 @@ Recomendación general
 Props como size, spacing, radius, gap, align, justify → usan tokens Reflex ("0"–"9").
 
 Props como padding, margin, width, height, font_size → puedes usar em, rem, px, %, etc.
+
+
+
+Empaquetado del proyecto:
+reflex export --frontend-only
+Decompresion:
+unzip frontend.zip -d public
+
+
+Ejecucion scrip:
+bash build.sh
+-ojo que en el curso se usa sh build.sh. Ver la dependencia del bash
