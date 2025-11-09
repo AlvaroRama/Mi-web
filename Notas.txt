@@ -42,3 +42,18 @@ unzip frontend.zip -d public
 Ejecucion scrip:
 bash build.sh
 -ojo que en el curso se usa sh build.sh. Ver la dependencia del bash
+
+vercel para desplegar frontend
+
+Backend (plataformas)
+
+Render.com
+fly.io 
+fl0.com (echar un vistazo)
+
+Usamos railway.App
+
+
+
+
+
