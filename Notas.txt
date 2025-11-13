@@ -53,7 +53,10 @@ fl0.com (echar un vistazo)
 
 Usamos railway.App
 
-
+Docker:
+docker build -t forgingdata:latest .
+docker run -d -p 8000:8000 --name app forgingdata:latest
+docker start app
 
 
 
