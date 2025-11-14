@@ -2,20 +2,41 @@ FROM python:3.13
 
 WORKDIR /app
 
-# Copy local context to `/app` inside container (see .dockerignore)
 COPY . .
 
-ENV VIRTUAL_ENV=/app/.venv_docker
-
+ENV VIRTUAL_ENV=/app/venv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
-
 RUN python -m venv $VIRTUAL_ENV
 
-RUN pip install --upgrade pip
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
-RUN pip install --no.cache-dir -r requirements.txt
+ENV PORT=8000
 
-CMD sh -c "reflex run --env prod --backend-only & tail -f /dev/null"
+EXPOSE 8000
+
+CMD ["sh", "-c", "reflex run --env prod --backend-only --backend-host 0.0.0.0 --backend-port ${PORT}"]
+
+
+
+#FROM python:3.13
+#
+#WORKDIR /app
+#
+## Copy local context to `/app` inside container (see .dockerignore)
+#COPY . .
+#
+#ENV VIRTUAL_ENV=/app/.venv_docker
+#
+#ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+#
+#RUN python -m venv $VIRTUAL_ENV
+#
+#RUN pip install --upgrade pip
+#
+#RUN pip install --no-cache-dir -r requirements.txt
+#
+#CMD sh -c "reflex run --env prod --backend-only & tail -f /dev/null"
 
 
 ## -------------------------------------------------------------------
