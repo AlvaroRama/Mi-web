@@ -6,7 +6,7 @@ config = rx.Config(
     # Nombre de la aplicación. Reflex lo usará para generar la carpeta del frontend,
     # identificar el proyecto y en ciertos metadatos.
     app_name="link_bio",
-
+    api_url="https://api-forgingdata.up.railway.app",
     # Lista de plugins que queremos activar en esta app
     plugins=[
         # Plugin que genera automáticamente un sitemap.xml
