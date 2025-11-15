@@ -11,7 +11,7 @@ RUN python -m venv $VIRTUAL_ENV
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-ENV PORT=8000
+# ENV PORT=8000 Lo asigno en Railway
 
 EXPOSE 8000
 
