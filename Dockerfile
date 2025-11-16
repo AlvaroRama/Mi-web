@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-ENV VIRTUAL_ENV=/app/venv
+ENV VIRTUAL_ENV=/app/.venv_docker
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN python -m venv $VIRTUAL_ENV
 
