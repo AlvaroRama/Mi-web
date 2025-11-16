@@ -8,7 +8,7 @@ config = rx.Config(
     app_name="link_bio",
     
     cors_allowed_origins=[
-        "http://localhost:3000"
+        "http://localhost:3000",
         "https://forgingdata.vercel.app"],
     
     api_url="https://api-forgingdata.up.railway.app",
