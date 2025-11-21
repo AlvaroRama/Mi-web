@@ -5,4 +5,3 @@ __pycache__/
 .web
 assets/external/
 .venv/
-public/
