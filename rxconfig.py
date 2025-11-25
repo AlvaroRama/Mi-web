@@ -11,7 +11,9 @@ config = rx.Config(
         "http://localhost:3000",
         "https://forgingdata.vercel.app"],
     
-    api_url="https://api-forgingdata.up.railway.app",
+    # Dirección del backend:
+    #api_url="https://api-forgingdata.up.railway.app",
+    
     # Lista de plugins que queremos activar en esta app
     plugins=[
         # Plugin que genera automáticamente un sitemap.xml

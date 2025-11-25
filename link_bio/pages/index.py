@@ -9,15 +9,29 @@ from link_bio.views.materias import materias
 from link_bio.components.navbar import navbar
 from link_bio.components.footer import footer
 
-
 from link_bio.styles.styles import MAX_WIDTH, Spacing_CSS, BASE_STYLE, STYLESHEETS
 
+from link_bio.api.api import hello
+
+#from link_bio.api.api import otra_cosa
+
+class IndexState(rx.State):
+    
+    mensaje: str = "Hola"
+    
+    @rx.var
+    def say_hello(self)-> str:
+        return hello()
+        
+
+    
 @rx.page(
     title = utils.index_title,
     description = utils.index_description,
     image= utils.preview,
-    meta = utils.index_meta
+    meta = utils.index_meta,
 )
+
 def index() -> rx.Component:
     return rx.flex(
         utils.lang(),
@@ -27,6 +41,7 @@ def index() -> rx.Component:
                 rx.vstack(
                     header(),
                     materias(),
+                    rx.text(IndexState.say_hello),
                     links(),
                     max_width = MAX_WIDTH,  # Ancho máximo del contenedor
                 ),

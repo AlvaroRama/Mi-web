@@ -6,6 +6,7 @@ from link_bio.pages.index import index
 
 from link_bio.pages.publicaciones import publicaciones
 
+from link_bio.api.api import fastapi_app
 
 class State(rx.State):
     """
@@ -40,6 +41,7 @@ app = rx.App(
             """
         ),
     ],
+    api_transformer=fastapi_app,
 )
 
 
