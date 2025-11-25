@@ -30,7 +30,7 @@ reflex init
 # API_URL="https://api-forgingdata.up.railway.app" reflex export --frontend-only
 # ---------------------------------------------------------------
 
-reflex export --frontend-only
+API_URL="https://api-forgingdata.up.railway.app" reflex export --frontend-only
 
 unzip frontend.zip -d public
 rm -f frontend.zip
