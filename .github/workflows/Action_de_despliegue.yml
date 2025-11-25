@@ -1,4 +1,4 @@
-name: Static Build
+name: Action_de_despliegue
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update static build"
+          commit_message: "Commit despliegue action"
           commit_user_name: "alvaro [GitHub Actions]"
           commit_user_email: "alvaroramabenedicto@gmail.com"
           commit_author: "alvaro <alvaroramabenedicto@gmail.com>"
