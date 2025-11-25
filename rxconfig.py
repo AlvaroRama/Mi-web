@@ -14,7 +14,7 @@ config = rx.Config(
     
     cors_allowed_origins=[
         "http://localhost:3000",
-        "https://forgingdata.vercel.app"
+        "https://forgingdata.vercel.app",
         "https://devforgingdata.vercel.app"],
     
     
