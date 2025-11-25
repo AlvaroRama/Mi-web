@@ -9,6 +9,7 @@ config = rx.Config(
     
     cors_allowed_origins=[
         "http://localhost:3000",
+        r"https://.*\.vercel\.app", # Permite todos los dominios temporales
         "https://forgingdata.vercel.app"],
     
     
