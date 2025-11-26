@@ -6,14 +6,16 @@ fastapi_app = FastAPI(title="My API")
 def hello() -> str:
     return "hola alvaro"
 
-def otra_cosa()->str:
-    return "Hola de nuevo"
-
 # El endpoint de FastAPI expuesto por api_transformer
 @fastapi_app.get("/hello")
 async def saludo() -> str:
     return hello()
 
+@fastapi_app.get("/railway/{estado}")
+async def estado_railway(estado: str)->bool:
+    if estado == "online":
+        return True
+    return False
 
 #######EJEMPLO DE SINCRONIA##########
 #

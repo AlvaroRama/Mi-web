@@ -13,17 +13,17 @@ from link_bio.styles.styles import MAX_WIDTH, Spacing_CSS, BASE_STYLE, STYLESHEE
 
 from link_bio.api.api import hello
 
-#from link_bio.api.api import otra_cosa
+from link_bio.api.api import estado_railway
 
 class IndexState(rx.State):
-    
-    mensaje: str = "Hola"
     
     @rx.var
     def say_hello(self)-> str:
         return hello()
-        
-
+    
+    #@rx.var
+    #def backend(self)-> bool:
+    #    return estado_railway("online")
     
 @rx.page(
     title = utils.index_title,
@@ -41,7 +41,7 @@ def index() -> rx.Component:
                 rx.vstack(
                     header(),
                     materias(),
-                    rx.text(IndexState.say_hello),
+                    #rx.text(IndexState.backend),
                     links(),
                     max_width = MAX_WIDTH,  # Ancho máximo del contenedor
                 ),
@@ -53,3 +53,4 @@ def index() -> rx.Component:
         direction = "column",
         stack_children_full_width = True
     )
+    

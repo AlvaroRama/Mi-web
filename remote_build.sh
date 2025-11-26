@@ -1,4 +1,3 @@
-
 python -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
@@ -28,7 +27,9 @@ reflex init
 #
 # Ejemplo de uso (solo si lo necesitas):
 # API_URL="https://api-forgingdata.up.railway.app" reflex export --frontend-only
+
 # ---------------------------------------------------------------
+export API_URL="https://api-forgingdata.up.railway.app"
 
 reflex export --frontend-only
 
