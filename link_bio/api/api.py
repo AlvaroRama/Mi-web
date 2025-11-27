@@ -1,4 +1,5 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
+import httpx
 
 fastapi_app = FastAPI(title="My API")
 
@@ -16,6 +17,32 @@ async def estado_railway(estado: str)->bool:
     if estado == "online":
         return True
     return False
+
+@fastapi_app.get("/github/{username}")
+
+async def github_profile(username: str):
+
+    url = f"https://api.github.com/users/{username}"
+
+    async with httpx.AsyncClient(timeout=5) as client:
+
+        r = await client.get(url)
+
+    if r.status_code != 200:
+
+        raise HTTPException(status_code=404, detail="User not found")
+
+    data = r.json()
+
+    return {
+
+        "url": data.get("html_url"),
+
+        "avatar": data.get("avatar_url"),
+    }
+
+
+
 
 #######EJEMPLO DE SINCRONIA##########
 #
