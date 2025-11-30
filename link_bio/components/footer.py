@@ -8,8 +8,7 @@ from rxconfig import target_api_url
 
 import httpx
 
-import requests
-
+from link_bio.components.info_service import info_service
 
 class GithubState(rx.State):
 
@@ -20,7 +19,7 @@ class GithubState(rx.State):
     @rx.event
 
     async def set_profile(self, username: str):
-
+        
         if not username:
 
             return
@@ -54,6 +53,7 @@ class GithubState(rx.State):
 
 def footer() -> rx.Component:
     return rx.vstack(
+        info_service(),
         rx.text(
             "Web realizada con tecnología Reflex",
             trim="both"
@@ -78,11 +78,13 @@ def footer() -> rx.Component:
             href="https://reflex.dev/",
             is_external=True,
         ),
+        
         rx.link(
             f"© 2024-{datetime.date.today().year} Álvaro Rama Benedicto",
             href="https://www.linkedin.com/in/alvaro-rama-benedicto-538603b4/?originalSubdomain=es",
             is_external=True,
         ),
+    
         rx.hstack(
             rx.link(
                 rx.avatar(src=GithubState.profile_image),

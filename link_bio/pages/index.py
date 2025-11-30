@@ -11,19 +11,13 @@ from link_bio.components.footer import footer
 
 from link_bio.styles.styles import MAX_WIDTH, Spacing_CSS, BASE_STYLE, STYLESHEETS
 
-from link_bio.api.api import hello
-
-from link_bio.api.api import estado_railway
+from link_bio.api.api_config import hello
 
 class IndexState(rx.State):
     
     @rx.var
     def say_hello(self)-> str:
         return hello()
-    
-    #@rx.var
-    #def backend(self)-> bool:
-    #    return estado_railway("online")
     
 @rx.page(
     title = utils.index_title,

@@ -2,11 +2,7 @@ import reflex as rx
 
 from link_bio.styles.styles import BASE_STYLE, STYLESHEETS
 
-from link_bio.pages.index import index
-
-from link_bio.pages.publicaciones import publicaciones
-
-from link_bio.api.api import fastapi_app
+from link_bio.api.api_config import fastapi_app
 
 class State(rx.State):
     """
@@ -43,7 +39,6 @@ app = rx.App(
     ],
     api_transformer=fastapi_app,
 )
-
 
 
 
